@@ -1,0 +1,34 @@
+---
+import BaseLayout from '../../layouts/BaseLayout.astro';
+import Nav from '../../components/Nav.astro';
+---
+
+<BaseLayout
+  title="KaoriQについて"
+  description="KaoriQは、性格科学とAIで香りを提案するデータ駆動型のフレグランス推薦プラットフォームです。"
+  lang="ja"
+  ogUrl="https://kaoriq.com/ja/about"
+  ogDescription="性格科学とAIで香りを提案するデータ駆動型のフレグランス推薦プラットフォーム。"
+>
+  <Nav lang="ja" current="about" />
+
+  <main style="max-width: 720px; margin: 0 auto; padding: 4rem 2rem;">
+    <h1 style="font-size: 1.75rem; font-weight: 700; margin-bottom: 1.5rem;">KaoriQについて</h1>
+
+    <div style="line-height: 1.85; color: var(--text-secondary);">
+      <p style="margin-bottom: 1.25rem;">
+        KaoriQは、香り選びに新しいアプローチを提供するフレグランス・ディスカバリー・プラットフォームです。マーケティングやトレンドに頼るのではなく、性格診断と香料成分データを組み合わせて、あなたに本当に似合う香りを見つけます。
+      </p>
+
+      <h2 style="font-size: 1.25rem; font-weight: 600; color: var(--text-primary); margin: 2rem 0 0.75rem;">仕組み</h2>
+      <p style="margin-bottom: 1.25rem;">
+        Big Five性格診断と59,000本以上の香水の成分レベル分析データベースを組み合わせた推薦エンジンを使用しています。香りを提案するとき、なぜその香りがあなたの性格に合うのかを説明します。
+      </p>
+
+      <h2 style="font-size: 1.25rem; font-weight: 600; color: var(--text-primary); margin: 2rem 0 0.75rem;">「KaoriQ」の由来</h2>
+      <p style="margin-bottom: 1.25rem;">
+        「Kaori（香り）」は日本語で芳香を意味し、「Q」はデータ駆動の定量的アプローチを表しています。主観的な体験に、科学とデータの知性を。それがKaoriQです。
+      </p>
+    </div>
+  </main>
+</BaseLayout>

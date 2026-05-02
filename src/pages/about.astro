@@ -1,0 +1,34 @@
+---
+import BaseLayout from '../layouts/BaseLayout.astro';
+import Nav from '../components/Nav.astro';
+---
+
+<BaseLayout
+  title="About — KaoriQ"
+  description="About KaoriQ: a data-driven fragrance recommendation platform powered by personality science and AI."
+  lang="en"
+  ogUrl="https://kaoriq.com/about"
+  ogDescription="About KaoriQ: data-driven fragrance recommendations powered by personality science."
+>
+  <Nav lang="en" current="about" />
+
+  <main style="max-width: 720px; margin: 0 auto; padding: 4rem 2rem;">
+    <h1 style="font-size: 1.75rem; font-weight: 700; margin-bottom: 1.5rem;">About KaoriQ</h1>
+
+    <div style="line-height: 1.85; color: var(--text-secondary);">
+      <p style="margin-bottom: 1.25rem;">
+        KaoriQ is a fragrance discovery platform that takes a different approach to scent selection. Instead of relying on marketing, celebrity endorsements, or trend cycles, we use personality diagnostics and fragrance component data to find scents that genuinely suit you.
+      </p>
+
+      <h2 style="font-size: 1.25rem; font-weight: 600; color: var(--text-primary); margin: 2rem 0 0.75rem;">How It Works</h2>
+      <p style="margin-bottom: 1.25rem;">
+        Our recommendation engine combines Big Five personality assessment with a database of 59,000+ fragrances analyzed at the ingredient level. When we suggest a scent, we tell you <em>why</em> it suits your personality — not just that it's popular or new.
+      </p>
+
+      <h2 style="font-size: 1.25rem; font-weight: 600; color: var(--text-primary); margin: 2rem 0 0.75rem;">Why "KaoriQ"?</h2>
+      <p style="margin-bottom: 1.25rem;">
+        "Kaori" (香り) is the Japanese word for scent or fragrance. The "Q" represents the quantitative, data-driven approach we take to an inherently subjective experience. Together: the intelligence of scent.
+      </p>
+    </div>
+  </main>
+</BaseLayout>

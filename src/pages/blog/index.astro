@@ -1,0 +1,41 @@
+---
+import BaseLayout from '../../layouts/BaseLayout.astro';
+import Nav from '../../components/Nav.astro';
+import { getCollection } from 'astro:content';
+
+const posts = (await getCollection('blog'))
+  .filter(p => p.data.lang === 'en')
+  .sort((a, b) => b.data.date.getTime() - a.data.date.getTime());
+---
+
+<BaseLayout
+  title="Blog — KaoriQ"
+  description="Articles on fragrance science, scent psychology, and data-driven perfumery."
+  lang="en"
+  ogUrl="https://kaoriq.com/blog"
+  ogDescription="Articles on fragrance science, scent psychology, and data-driven perfumery."
+>
+  <Nav lang="en" current="blog" />
+
+  <main style="max-width: 720px; margin: 0 auto; padding: 4rem 2rem;">
+    <h1 style="font-size: 1.75rem; font-weight: 700; margin-bottom: 2rem;">Blog</h1>
+
+    {posts.length === 0 && (
+      <p style="color: var(--text-muted);">No articles yet. Check back soon.</p>
+    )}
+
+    <div style="display: flex; flex-direction: column; gap: 1.5rem;">
+      {posts.map(post => (
+        <a href={`/blog/${post.id.replace('en/', '')}`} style="text-decoration: none; color: inherit;">
+          <article style="padding: 1rem 0; border-bottom: 1px solid var(--text-separator);">
+            <h2 style="font-size: 1.1rem; font-weight: 600; margin-bottom: 0.35rem;">{post.data.title}</h2>
+            <p style="font-size: 0.9rem; color: var(--text-muted); margin: 0;">
+              <time datetime={post.data.date.toISOString()}>{post.data.date.toISOString().split('T')[0]}</time>
+              {' — '}{post.data.description}
+            </p>
+          </article>
+        </a>
+      ))}
+    </div>
+  </main>
+</BaseLayout>

@@ -1,0 +1,36 @@
+# KaoriQ
+
+> Data-driven fragrance recommendations powered by personality science.
+
+KaoriQ is a fragrance discovery platform that matches scents to individual personalities using AI analysis and a database of 59,000+ fragrances. Instead of relying on marketing or trends, KaoriQ uses personality diagnostics (Big Five model) and fragrance component data to generate personalized recommendations with clear reasoning.
+
+## What KaoriQ Does
+
+- Personality-based fragrance matching using Big Five personality traits
+- Fragrance analysis backed by 59,000+ perfume database with ingredient-level data
+- AI-generated explanations of why specific scents suit specific personalities
+- Educational content on fragrance science, scent psychology, and perfumery
+
+## Content
+
+- Blog (EN): https://kaoriq.com/blog
+- Blog (JA): https://kaoriq.com/ja/blog
+- RSS (EN): https://kaoriq.com/blog.xml
+- RSS (JA): https://kaoriq.com/ja/blog.xml
+
+## Topics Covered
+
+- Fragrance families and accords (woody, citrus, floral, oriental, etc.)
+- Scent psychology and personality correlation
+- Fragrance ingredient science (essential oils, aroma compounds)
+- Seasonal and situational scent selection
+- Data-driven perfumery and recommendation algorithms
+
+## Languages
+
+- English (primary)
+- Japanese (日本語)
+
+## Contact
+
+- Website: https://kaoriq.com

@@ -1,0 +1,50 @@
+---
+import BaseLayout from '../layouts/BaseLayout.astro';
+import Nav from '../components/Nav.astro';
+import { getCollection } from 'astro:content';
+
+const posts = (await getCollection('blog'))
+  .filter(p => p.data.lang === 'en')
+  .sort((a, b) => b.data.date.getTime() - a.data.date.getTime())
+  .slice(0, 5);
+---
+
+<BaseLayout
+  title="KaoriQ — Data-Driven Fragrance Recommendations"
+  description="Discover your perfect scent through personality-based AI recommendations, backed by a database of 59,000+ fragrances."
+  lang="en"
+  ogUrl="https://kaoriq.com"
+  ogDescription="Discover your perfect scent through personality-based AI recommendations."
+>
+  <Nav lang="en" current="home" />
+
+  <main style="max-width: 720px; margin: 0 auto; padding: 4rem 2rem;">
+    <section style="margin-bottom: 3rem;">
+      <h1 style="font-size: 2.25rem; font-weight: 700; line-height: 1.3; margin-bottom: 1rem;">
+        Your personality.<br />Your scent.
+      </h1>
+      <p style="font-size: 1.1rem; color: var(--text-secondary); line-height: 1.7; max-width: 560px;">
+        KaoriQ matches fragrances to your personality using AI and a database of 59,000+ scents. No guesswork, no hype — just the science of what smells right on you.
+      </p>
+    </section>
+
+    {posts.length > 0 && (
+      <section>
+        <h2 style="font-size: 1.25rem; font-weight: 600; margin-bottom: 1.5rem; color: var(--text-label);">Latest Articles</h2>
+        <div style="display: flex; flex-direction: column; gap: 1.5rem;">
+          {posts.map(post => (
+            <a href={`/blog/${post.id.replace('en/', '')}`} style="text-decoration: none; color: inherit;">
+              <article style="padding: 1rem 0; border-bottom: 1px solid var(--text-separator);">
+                <h3 style="font-size: 1.1rem; font-weight: 600; margin-bottom: 0.35rem;">{post.data.title}</h3>
+                <p style="font-size: 0.9rem; color: var(--text-muted); margin: 0;">
+                  <time datetime={post.data.date.toISOString()}>{post.data.date.toISOString().split('T')[0]}</time>
+                  {' — '}{post.data.description}
+                </p>
+              </article>
+            </a>
+          ))}
+        </div>
+      </section>
+    )}
+  </main>
+</BaseLayout>
