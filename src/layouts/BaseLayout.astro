@@ -45,46 +45,53 @@ const resolvedOgImage = ogImage || "https://kaoriq.com/og-image.png";
         document.documentElement.setAttribute('data-theme', t);
       })();
     </script>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,600;0,700;1,400&family=DM+Sans:wght@400;500;600;700&display=swap" rel="stylesheet" />
     <slot name="head" />
     <style>
       @import "tailwindcss";
 
       :root,
       [data-theme="dark"] {
-        --bg-primary: #0f172a;
-        --bg-card: #1e293b;
-        --text-primary: #e2e8f0;
-        --text-secondary: #cbd5e1;
-        --text-label: #94a3b8;
-        --text-muted: #64748b;
-        --text-separator: #475569;
-        --link-color: #c4b5fd;
-        --accent-primary: #c4b5fd;
-        --accent-warm: #f59e0b;
-        --accent-green: #10b981;
+        --bg-primary: #1A1714;
+        --bg-card: #2A2520;
+        --text-primary: #E8E0D6;
+        --text-secondary: #C4B8A8;
+        --text-label: #A89888;
+        --text-muted: #7A6E60;
+        --text-separator: #3D3630;
+        --link-color: #D4A96A;
+        --accent-primary: #C4972A;
+        --accent-warm: #C07850;
+        --accent-green: #7A9A6E;
       }
 
       [data-theme="light"] {
-        --bg-primary: #faf8f5;
-        --bg-card: #ffffff;
-        --text-primary: #1e293b;
-        --text-secondary: #334155;
-        --text-label: #64748b;
-        --text-muted: #94a3b8;
-        --text-separator: #e2e0db;
-        --link-color: #7c3aed;
-        --accent-primary: #7c3aed;
-        --accent-warm: #d97706;
-        --accent-green: #059669;
+        --bg-primary: #FAF7F2;
+        --bg-card: #FFFFFF;
+        --text-primary: #2C1810;
+        --text-secondary: #4A3828;
+        --text-label: #6B5B4E;
+        --text-muted: #9A8A7A;
+        --text-separator: #E0D8CE;
+        --link-color: #9A7B4F;
+        --accent-primary: #B8860B;
+        --accent-warm: #C07850;
+        --accent-green: #5A7A4E;
       }
 
       body {
-        font-family: system-ui, -apple-system, sans-serif;
+        font-family: 'DM Sans', system-ui, -apple-system, sans-serif;
         background-color: var(--bg-primary);
         color: var(--text-primary);
         margin: 0;
         min-height: 100vh;
         transition: background-color 0.2s, color 0.2s;
+      }
+
+      h1, h2, h3 {
+        font-family: 'Cormorant Garamond', Georgia, 'Times New Roman', serif;
       }
 
       a {
