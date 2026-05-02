@@ -3,6 +3,7 @@ title: "香水選びにトレンドより性格が重要な理由"
 description: "Big Five性格特性がなぜ季節のトレンドよりも香りの好みを正確に予測するのか、その科学的根拠を解説します。"
 date: 2026-05-02
 lang: ja
+category: science
 tags: ["香りの心理学", "Big Five", "フレグランスサイエンス"]
 featured: true
 ---

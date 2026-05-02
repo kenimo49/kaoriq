@@ -45,6 +45,18 @@ kaoriq/
 └── astro.config.mjs
 ```
 
+## Blog Categories
+
+Blog articles are organized into three categories, each with a different writing style and target audience:
+
+| Category | Label (EN / JA) | Target Reader | Writing Style |
+|----------|-----------------|---------------|---------------|
+| `guide` | Guide / 選び方ガイド | Beginners looking for the right scent | Friendly, practical. Comparison tables, checklists, scan-friendly |
+| `science` | Science / 香りの科学 | Curious readers who want the "why" | Research-backed, accessible. Technical terms always explained |
+| `story` | Story / 香りの世界 | Readers who enjoy fragrance culture | Editorial, essay-style. History, people, cultural context |
+
+Each article requires a `category` field in its frontmatter (`guide`, `science`, or `story`). The blog index page provides tab-based filtering so readers can choose what interests them.
+
 ## Development
 
 ```sh

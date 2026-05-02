@@ -3,6 +3,7 @@ title: "How Room Size Changes Which Fragrance Format Actually Works"
 description: "A practical guide to choosing between candles, reed diffusers, electric diffusers, and incense based on your room's square footage -- because the wrong format in the wrong space is just expensive air."
 date: 2026-05-03
 lang: en
+category: guide
 tags: ["room-fragrance", "home-scenting", "practical-guide"]
 featured: false
 canonical_url: "https://kaoriq.com/blog/room-size-fragrance-format-guide"

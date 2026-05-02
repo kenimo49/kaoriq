@@ -7,13 +7,14 @@ interface Props {
   description: string;
   lang: 'en' | 'ja';
   date: Date;
+  category?: 'science' | 'guide' | 'story';
   tags: string[];
   canonicalUrl: string;
   ogImage?: string;
   crossPostedTo?: { platform: string; url: string }[];
 }
 
-const { title, description, lang, date, tags, canonicalUrl, ogImage, crossPostedTo } = Astro.props;
+const { title, description, lang, date, category, tags, canonicalUrl, ogImage, crossPostedTo } = Astro.props;
 const formattedDate = date.toISOString().split('T')[0];
 const blogIndexUrl = lang === 'ja' ? '/ja/blog' : '/blog';
 const altLangUrl = lang === 'ja'
@@ -55,6 +56,26 @@ const altLangUrl = lang === 'ja'
       "keywords": tags.join(', '),
     })} />
     <style>
+      .category-badge {
+        font-size: 0.7rem;
+        padding: 0.1rem 0.45rem;
+        border-radius: 4px;
+        font-weight: 600;
+        text-transform: uppercase;
+        letter-spacing: 0.03em;
+      }
+      .category-science {
+        background: rgba(196, 151, 42, 0.15);
+        color: var(--accent-primary);
+      }
+      .category-guide {
+        background: rgba(107, 142, 35, 0.15);
+        color: #6B8E23;
+      }
+      .category-story {
+        background: rgba(180, 120, 80, 0.15);
+        color: #B47850;
+      }
       .prose {
         font-size: 1rem;
         line-height: 1.85;
@@ -161,6 +182,13 @@ const altLangUrl = lang === 'ja'
         </a>
         <h1 style="font-size: 2rem; font-weight: 700; margin: 1rem 0 0.75rem; line-height: 1.3;">{title}</h1>
         <div style="display: flex; align-items: center; gap: 1rem; flex-wrap: wrap; font-size: 0.85rem; color: var(--text-muted);">
+          {category && (
+            <span class={`category-badge category-${category}`}>{
+              category === 'science' ? (lang === 'ja' ? '科学' : 'Science') :
+              category === 'guide' ? (lang === 'ja' ? 'ガイド' : 'Guide') :
+              (lang === 'ja' ? 'ストーリー' : 'Story')
+            }</span>
+          )}
           <time datetime={date.toISOString()}>{formattedDate}</time>
           {tags.length > 0 && (
             <div style="display: flex; gap: 0.5rem; flex-wrap: wrap;">

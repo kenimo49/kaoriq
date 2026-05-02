@@ -3,6 +3,7 @@ title: "Why Your Personality Matters More Than Trends When Choosing Fragrance"
 description: "The science behind personality-based scent selection and why Big Five traits predict fragrance preferences better than seasonal trends."
 date: 2026-05-02
 lang: en
+category: science
 tags: ["scent-psychology", "big-five", "fragrance-science"]
 featured: true
 ---
