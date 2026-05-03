@@ -1,0 +1,148 @@
+---
+import BaseLayout from '../../../layouts/BaseLayout.astro';
+import Nav from '../../../components/Nav.astro';
+import { getCollection } from 'astro:content';
+
+const posts = (await getCollection('blog'))
+  .filter(p => p.data.lang === 'es')
+  .sort((a, b) => b.data.date.getTime() - a.data.date.getTime());
+
+const categories = [
+  { key: 'all', label: 'Todos' },
+  { key: 'guide', label: 'Guia', description: 'Encuentra la fragancia ideal para ti' },
+  { key: 'science', label: 'Ciencia', description: 'Por que esa fragancia funciona' },
+  { key: 'story', label: 'Historia', description: 'Cultura, historia y perfumistas' },
+] as const;
+---
+
+<BaseLayout
+  title="Blog — KaoriQ"
+  description="Guias para elegir fragancias de ambiente, ciencia de los aromas y cultura olfativa."
+  lang="es"
+  ogUrl="https://kaoriq.com/es/blog"
+  ogDescription="Guias para elegir fragancias de ambiente, ciencia de los aromas y cultura olfativa."
+>
+  <Nav lang="en" current="blog" />
+
+  <main style="max-width: 720px; margin: 0 auto; padding: 4rem 2rem;">
+    <h1 style="font-size: 1.75rem; font-weight: 700; margin-bottom: 0.5rem;">Blog</h1>
+    <p style="color: var(--text-muted); font-size: 0.9rem; margin-bottom: 2rem;">Elige una categoria que te interese.</p>
+
+    <div class="category-tabs" role="tablist">
+      {categories.map(cat => (
+        <button
+          role="tab"
+          class="category-tab"
+          data-category={cat.key}
+          aria-selected={cat.key === 'all' ? 'true' : 'false'}
+        >
+          {cat.label}
+        </button>
+      ))}
+    </div>
+
+    <div style="display: flex; flex-direction: column; gap: 1.5rem; margin-top: 1.5rem;">
+      {posts.map(post => (
+        <a
+          href={`/es/blog/${post.id.replace('es/', '')}`}
+          style="text-decoration: none; color: inherit;"
+          data-post-category={post.data.category}
+        >
+          <article style="padding: 1rem 0; border-bottom: 1px solid var(--text-separator);">
+            <div style="display: flex; align-items: center; gap: 0.5rem; margin-bottom: 0.35rem;">
+              <span class={`category-badge category-${post.data.category}`}>{
+                post.data.category === 'science' ? 'Ciencia' :
+                post.data.category === 'guide' ? 'Guia' : 'Historia'
+              }</span>
+              <h2 style="font-size: 1.1rem; font-weight: 600; margin: 0;">{post.data.title}</h2>
+            </div>
+            <p style="font-size: 0.9rem; color: var(--text-muted); margin: 0;">
+              <time datetime={post.data.date.toISOString()}>{post.data.date.toISOString().split('T')[0]}</time>
+              {' — '}{post.data.description}
+            </p>
+          </article>
+        </a>
+      ))}
+    </div>
+
+    <p class="no-posts" style="color: var(--text-muted); display: none;">Aun no hay articulos en esta categoria.</p>
+  </main>
+</BaseLayout>
+
+<style>
+  .category-tabs {
+    display: flex;
+    gap: 0.5rem;
+    flex-wrap: wrap;
+    border-bottom: 1px solid var(--text-separator);
+    padding-bottom: 0.75rem;
+  }
+  .category-tab {
+    background: none;
+    border: 1px solid var(--text-separator);
+    border-radius: 20px;
+    padding: 0.35rem 0.9rem;
+    font-size: 0.85rem;
+    color: var(--text-muted);
+    cursor: pointer;
+    transition: all 0.2s;
+    font-family: inherit;
+  }
+  .category-tab:hover {
+    color: var(--text-primary);
+    border-color: var(--text-primary);
+  }
+  .category-tab[aria-selected="true"] {
+    background: var(--accent-primary);
+    color: #fff;
+    border-color: var(--accent-primary);
+  }
+  .category-badge {
+    font-size: 0.7rem;
+    padding: 0.1rem 0.45rem;
+    border-radius: 4px;
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 0.03em;
+    flex-shrink: 0;
+  }
+  .category-science {
+    background: rgba(196, 151, 42, 0.15);
+    color: var(--accent-primary);
+  }
+  .category-guide {
+    background: rgba(107, 142, 35, 0.15);
+    color: #6B8E23;
+  }
+  .category-story {
+    background: rgba(180, 120, 80, 0.15);
+    color: #B47850;
+  }
+</style>
+
+<script>
+  const tabs = document.querySelectorAll('.category-tab');
+  const posts = document.querySelectorAll('[data-post-category]');
+  const noPostsMsg = document.querySelector('.no-posts') as HTMLElement;
+
+  tabs.forEach(tab => {
+    tab.addEventListener('click', () => {
+      const category = (tab as HTMLElement).dataset.category;
+
+      tabs.forEach(t => t.setAttribute('aria-selected', 'false'));
+      tab.setAttribute('aria-selected', 'true');
+
+      let visibleCount = 0;
+      posts.forEach(post => {
+        const el = post as HTMLElement;
+        const match = category === 'all' || el.dataset.postCategory === category;
+        el.style.display = match ? '' : 'none';
+        if (match) visibleCount++;
+      });
+
+      if (noPostsMsg) {
+        noPostsMsg.style.display = visibleCount === 0 ? '' : 'none';
+      }
+    });
+  });
+</script>

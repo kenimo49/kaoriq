@@ -1,0 +1,30 @@
+---
+import { getCollection, render } from 'astro:content';
+import BlogLayout from '../../../layouts/BlogLayout.astro';
+
+export async function getStaticPaths() {
+  const posts = (await getCollection('blog')).filter(p => p.data.lang === 'fr');
+  return posts.map(post => ({
+    params: { slug: post.id.replace('fr/', '') },
+    props: { post },
+  }));
+}
+
+const { post } = Astro.props;
+const { Content } = await render(post);
+const canonicalUrl = `https://kaoriq.com/fr/blog/${post.id.replace('fr/', '')}`;
+---
+
+<BlogLayout
+  title={post.data.title}
+  description={post.data.description}
+  lang="fr"
+  date={post.data.date}
+  category={post.data.category}
+  tags={post.data.tags}
+  canonicalUrl={canonicalUrl}
+  ogImage={post.data.og_image}
+  crossPostedTo={post.data.cross_posted_to}
+>
+  <Content />
+</BlogLayout>
