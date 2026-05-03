@@ -5,7 +5,7 @@ import Nav from '../components/Nav.astro';
 interface Props {
   title: string;
   description: string;
-  lang: 'en' | 'ja';
+  lang: string;
   date: Date;
   category?: 'science' | 'guide' | 'story';
   tags: string[];
@@ -218,6 +218,106 @@ const altLangUrl = lang === 'ja'
           </p>
         </footer>
       )}
+      <div class="feedback" id="feedback-section">
+        <p class="feedback-question">{
+          lang === 'ja' ? 'この記事は役に立ちましたか？' :
+          lang === 'ko' ? '이 글이 도움이 되었나요?' :
+          lang === 'fr' ? 'Cet article vous a-t-il aide ?' :
+          lang === 'pt' ? 'Este artigo foi util?' :
+          lang === 'es' ? 'Te resulto util este articulo?' :
+          'Was this article helpful?'
+        }</p>
+        <div class="feedback-buttons">
+          <button class="feedback-btn" data-reaction="helpful" aria-label="Helpful">
+            <span class="feedback-icon">&#9650;</span>
+            <span>{lang === 'ja' ? 'はい' : lang === 'ko' ? '네' : lang === 'fr' ? 'Oui' : lang === 'pt' ? 'Sim' : lang === 'es' ? 'Si' : 'Yes'}</span>
+          </button>
+          <button class="feedback-btn" data-reaction="not_helpful" aria-label="Not helpful">
+            <span class="feedback-icon">&#9660;</span>
+            <span>{lang === 'ja' ? 'いいえ' : lang === 'ko' ? '아니요' : lang === 'fr' ? 'Non' : lang === 'pt' ? 'Nao' : lang === 'es' ? 'No' : 'No'}</span>
+          </button>
+        </div>
+        <p class="feedback-thanks" style="display: none;">{
+          lang === 'ja' ? 'ご回答ありがとうございます' :
+          lang === 'ko' ? '의견 감사합니다' :
+          lang === 'fr' ? 'Merci pour votre retour' :
+          lang === 'pt' ? 'Obrigado pelo seu feedback' :
+          lang === 'es' ? 'Gracias por tu opinion' :
+          'Thank you for your feedback'
+        }</p>
+      </div>
+
     </article>
   </main>
 </BaseLayout>
+
+<style>
+  .feedback {
+    margin-top: 3rem;
+    padding-top: 1.5rem;
+    border-top: 1px solid var(--text-separator);
+    text-align: center;
+  }
+  .feedback-question {
+    font-size: 0.9rem;
+    color: var(--text-muted);
+    margin-bottom: 0.75rem;
+  }
+  .feedback-buttons {
+    display: flex;
+    justify-content: center;
+    gap: 1rem;
+  }
+  .feedback-btn {
+    display: flex;
+    align-items: center;
+    gap: 0.4rem;
+    padding: 0.5rem 1.25rem;
+    border: 1px solid var(--text-separator);
+    border-radius: 20px;
+    background: none;
+    color: var(--text-muted);
+    font-size: 0.85rem;
+    font-family: inherit;
+    cursor: pointer;
+    transition: all 0.2s;
+  }
+  .feedback-btn:hover {
+    border-color: var(--accent-primary);
+    color: var(--accent-primary);
+  }
+  .feedback-icon {
+    font-size: 0.7rem;
+  }
+  .feedback-thanks {
+    font-size: 0.85rem;
+    color: var(--accent-primary);
+    margin-top: 0.75rem;
+  }
+</style>
+
+<script define:vars={{ canonicalUrl, category }}>
+  const section = document.getElementById('feedback-section');
+  const buttons = section.querySelectorAll('.feedback-btn');
+  const thanks = section.querySelector('.feedback-thanks');
+  const btnContainer = section.querySelector('.feedback-buttons');
+
+  const slug = canonicalUrl.split('/blog/').pop() || '';
+
+  buttons.forEach(btn => {
+    btn.addEventListener('click', () => {
+      const reaction = btn.dataset.reaction;
+
+      if (typeof gtag === 'function') {
+        gtag('event', 'article_feedback', {
+          reaction: reaction,
+          article_slug: slug,
+          article_category: category || 'unknown',
+        });
+      }
+
+      btnContainer.style.display = 'none';
+      thanks.style.display = '';
+    });
+  });
+</script>
