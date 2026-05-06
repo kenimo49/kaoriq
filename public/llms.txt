@@ -13,8 +13,8 @@ KaoriQ is a fragrance discovery platform that matches scents to individual perso
 
 ## Content
 
-- Blog (EN): https://kaoriq.com/blog
-- Blog (JA): https://kaoriq.com/ja/blog
+- Blog (EN): https://kaoriq.com/blog/
+- Blog (JA): https://kaoriq.com/ja/blog/
 - RSS (EN): https://kaoriq.com/blog.xml
 - RSS (JA): https://kaoriq.com/ja/blog.xml
 

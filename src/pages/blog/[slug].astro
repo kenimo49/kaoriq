@@ -1,18 +1,23 @@
 ---
 import { getCollection, render } from 'astro:content';
 import BlogLayout from '../../layouts/BlogLayout.astro';
+import { blogAlternates } from '../../lib/alternates';
 
 export async function getStaticPaths() {
-  const posts = (await getCollection('blog')).filter(p => p.data.lang === 'en');
-  return posts.map(post => ({
-    params: { slug: post.id.replace('en/', '') },
-    props: { post },
-  }));
+  const allPosts = await getCollection('blog');
+  const posts = allPosts.filter(p => p.data.lang === 'en');
+  return posts.map(post => {
+    const slug = post.id.replace('en/', '');
+    return {
+      params: { slug },
+      props: { post, alternates: blogAlternates(allPosts, slug) },
+    };
+  });
 }
 
-const { post } = Astro.props;
+const { post, alternates } = Astro.props;
 const { Content } = await render(post);
-const canonicalUrl = `https://kaoriq.com/blog/${post.id.replace('en/', '')}`;
+const canonicalUrl = `https://kaoriq.com/blog/${post.id.replace('en/', '')}/`;
 ---
 
 <BlogLayout
@@ -25,6 +30,7 @@ const canonicalUrl = `https://kaoriq.com/blog/${post.id.replace('en/', '')}`;
   canonicalUrl={canonicalUrl}
   ogImage={post.data.og_image}
   crossPostedTo={post.data.cross_posted_to}
+  alternates={alternates}
 >
   <Content />
 </BlogLayout>

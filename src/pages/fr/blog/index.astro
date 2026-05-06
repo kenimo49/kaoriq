@@ -19,7 +19,7 @@ const categories = [
   title="Blog — KaoriQ"
   description="Guides pour choisir vos parfums d'ambiance, science des odeurs et culture olfactive."
   lang="fr"
-  ogUrl="https://kaoriq.com/fr/blog"
+  ogUrl="https://kaoriq.com/fr/blog/"
   ogDescription="Guides pour choisir vos parfums d'ambiance, science des odeurs et culture olfactive."
 >
   <Nav lang="fr" current="blog" />
@@ -44,7 +44,7 @@ const categories = [
     <div style="display: flex; flex-direction: column; gap: 1.5rem; margin-top: 1.5rem;">
       {posts.map(post => (
         <a
-          href={`/fr/blog/${post.id.replace('fr/', '')}`}
+          href={`/fr/blog/${post.id.replace('fr/', '')}/`}
           style="text-decoration: none; color: inherit;"
           data-post-category={post.data.category}
         >

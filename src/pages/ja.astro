@@ -13,7 +13,7 @@ const posts = (await getCollection('blog'))
   title="KaoriQ — あなたの性格に合う香りを、データで見つける"
   description="59,000本以上の香水データベースとAI性格診断で、あなたに本当に似合う香りを提案します。"
   lang="ja"
-  ogUrl="https://kaoriq.com/ja"
+  ogUrl="https://kaoriq.com/ja/"
   ogDescription="59,000本以上の香水データベースとAI性格診断で、あなたに本当に似合う香りを提案します。"
 >
   <Nav lang="ja" current="home" />
@@ -57,7 +57,7 @@ const posts = (await getCollection('blog'))
         <h2 style="font-size: 1.25rem; font-weight: 600; margin-bottom: 1.5rem; color: var(--text-label);">最新の記事</h2>
         <div style="display: flex; flex-direction: column; gap: 1.5rem;">
           {posts.map(post => (
-            <a href={`/ja/blog/${post.id.replace('ja/', '')}`} style="text-decoration: none; color: inherit;">
+            <a href={`/ja/blog/${post.id.replace('ja/', '')}/`} style="text-decoration: none; color: inherit;">
               <article style="padding: 1rem 0; border-bottom: 1px solid var(--text-separator);">
                 <h3 style="font-size: 1.1rem; font-weight: 600; margin-bottom: 0.35rem;">{post.data.title}</h3>
                 <p style="font-size: 0.9rem; color: var(--text-muted); margin: 0;">

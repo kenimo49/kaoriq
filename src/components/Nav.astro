@@ -7,12 +7,12 @@ interface Props {
 const { lang, current = 'home' } = Astro.props;
 
 const langConfig: Record<string, { home: string; blog: string; about: string; label: string }> = {
-  en: { home: '/', blog: '/blog', about: '/about', label: 'EN' },
-  ja: { home: '/ja', blog: '/ja/blog', about: '/ja/about', label: 'JP' },
-  ko: { home: '/ko/blog', blog: '/ko/blog', about: '/about', label: 'KO' },
-  fr: { home: '/fr/blog', blog: '/fr/blog', about: '/about', label: 'FR' },
-  pt: { home: '/pt/blog', blog: '/pt/blog', about: '/about', label: 'PT' },
-  es: { home: '/es/blog', blog: '/es/blog', about: '/about', label: 'ES' },
+  en: { home: '/', blog: '/blog/', about: '/about/', label: 'EN' },
+  ja: { home: '/ja/', blog: '/ja/blog/', about: '/ja/about/', label: 'JP' },
+  ko: { home: '/ko/blog/', blog: '/ko/blog/', about: '/about/', label: 'KO' },
+  fr: { home: '/fr/blog/', blog: '/fr/blog/', about: '/about/', label: 'FR' },
+  pt: { home: '/pt/blog/', blog: '/pt/blog/', about: '/about/', label: 'PT' },
+  es: { home: '/es/blog/', blog: '/es/blog/', about: '/about/', label: 'ES' },
 };
 
 const currentLang = langConfig[lang] || langConfig.en;

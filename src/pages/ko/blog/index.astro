@@ -19,7 +19,7 @@ const categories = [
   title="블로그 — KaoriQ"
   description="향 선택 가이드, 향의 과학, 향 문화에 관한 글."
   lang="ko"
-  ogUrl="https://kaoriq.com/ko/blog"
+  ogUrl="https://kaoriq.com/ko/blog/"
   ogDescription="향 선택 가이드, 향의 과학, 향 문화에 관한 글."
 >
   <Nav lang="ko" current="blog" />
@@ -44,7 +44,7 @@ const categories = [
     <div style="display: flex; flex-direction: column; gap: 1.5rem; margin-top: 1.5rem;">
       {posts.map(post => (
         <a
-          href={`/ko/blog/${post.id.replace('ko/', '')}`}
+          href={`/ko/blog/${post.id.replace('ko/', '')}/`}
           style="text-decoration: none; color: inherit;"
           data-post-category={post.data.category}
         >
