@@ -18,7 +18,7 @@ What actually happened: I lay awake for an hour, hyper-aware of the candle smell
 
 This is the part nobody warns you about with bedroom fragrance: a room scent that smells lovely in a shop, or in someone else's living room, can turn into a tiny background irritation when your goal is "stop thinking and fall asleep." The bedroom is the one room in your house with a *function*, and most fragrance advice forgets that.
 
-So here's a guide written from the point of view of the function, not the smell.
+So here's a guide written from the function side first, smell second.
 
 ## What Makes a Bedroom Scent "Sleep-Friendly"
 
@@ -28,7 +28,7 @@ Three things separate a sleep-friendly room scent from a generic nice-smelling o
 
 **2. It survives olfactory adaptation.** Your brain stops registering most steady smells after about 15-20 minutes. That's actually a feature in a bedroom: you don't *want* to be aware of the scent at hour two. But it means the impressive top notes you smelled at the store are mostly irrelevant. What matters is the base note, the part that lingers and quietly does its job while your conscious nose has clocked out.
 
-**3. It calms more than it stimulates.** Some lovely fragrances are subtly energising: bright citrus tops, peppermint, eucalyptus, certain green florals. Wonderful in a bathroom at 7 AM. A nightmare on your nightstand at 11 PM. A bedroom scent should slow your physiology, not nudge it.
+**3. It calms more than it stimulates.** Some lovely fragrances are subtly energising: bright citrus tops, peppermint, eucalyptus, certain green florals. Wonderful in a bathroom at 7 AM. A nightmare on your nightstand at 11 PM. A bedroom scent should slow your physiology, not nudge it the other way.
 
 You'll notice none of this is about how the scent smells in the abstract. It's about what it does in a room where you're trying to stop thinking.
 
@@ -142,7 +142,7 @@ Some sleep-focused models have a "pulse" mode that runs in 5-minute bursts every
 
 ## Three Sleeper Types, Three Recipes
 
-This is the part where the format and the family come together. Use these as starting points, not prescriptions.
+This is the part where the format and the family come together. Use these as rough starting points and tweak them.
 
 ### Type 1: The Anxious Overthinker
 
@@ -164,7 +164,7 @@ You fall asleep fine, but the slightest thing wakes you, and once you're awake y
 
 You sleep fine. You just want your bedroom to *feel* a certain way: like a place that takes care of you. The scent is more about the ritual and the atmosphere than fixing a problem.
 
-**What you want**: Something familiar, a little nostalgic, easy to like. The function here is mood, not pharmacology.
+**What you want**: Something familiar, a little nostalgic, easy to like. The function here is mood — pharmacology can sit this one out.
 
 **Recipe**: Lavender candle for the wind-down hour, blown out before bed, with a soft chamomile-and-amber reed diffuser for steady background. This is the only category where I'd recommend lavender first.
 
