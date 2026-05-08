@@ -6,7 +6,7 @@ lang: ja
 category: guide
 tags: ["空間フレグランス", "性格診断", "選び方ガイド", "初心者向け"]
 featured: false
-canonical_url: "https://kaoriq.com/ja/blog/personality-type-first-room-fragrance-guide"
+canonical_url: "https://kaoriq.com/ja/blog/personality-type-first-room-fragrance-guide/"
 cross_posted_to: []
 ---
 
@@ -26,7 +26,7 @@ cross_posted_to: []
 
 心理学で最も再現性の高い性格モデル「Big Five」（開放性・誠実性・外向性・協調性・神経症傾向の5因子）と香りの好みの関係を調べた研究が複数あります。*Flavour and Fragrance Journal* の2015年の研究では、「開放性」が高い人は複雑でウッディ・オリエンタルな香りを好み、「協調性」が高い人はクリーンでフローラルな香りを選ぶ傾向がありました。
 
-完全な一対一対応ではありません。でも「何も手がかりがない」よりは、はるかにマシな出発点になります。詳しい科学的背景は[こちらの記事](/ja/blog/why-personality-matters-for-fragrance)で書いています。ここでは実用に絞ります。
+完全な一対一対応ではありません。でも「何も手がかりがない」よりは、はるかにマシな出発点になります。詳しい科学的背景は[こちらの記事](/ja/blog/why-personality-matters-for-fragrance/)で書いています。ここでは実用に絞ります。
 
 ## 3つの質問で、あなたの香りタイプを見つける
 
@@ -118,7 +118,7 @@ cross_posted_to: []
 
 ### 寝室（6〜10㎡）
 
-嗅覚感度は夜にピークを迎えるので、控えめでも十分香ります（[詳しくはこちら](/ja/blog/olfactory-circadian-rhythm-fragrance)）。ラベンダーのリードディフューザーをリード少なめで置くか、就寝30分前にキャンドルを点けて15分で消す。残り香だけで夜は足ります。感度が高い分、強すぎる香りは頭痛の原因になるので注意。
+嗅覚感度は夜にピークを迎えるので、控えめでも十分香ります（[詳しくはこちら](/ja/blog/olfactory-circadian-rhythm-fragrance/)）。ラベンダーのリードディフューザーをリード少なめで置くか、就寝30分前にキャンドルを点けて15分で消す。残り香だけで夜は足ります。感度が高い分、強すぎる香りは頭痛の原因になるので注意。
 
 ### 仕事スペース（6〜8㎡）
 
@@ -141,4 +141,4 @@ cross_posted_to: []
 
 ディフューザーの棚の前で30分固まる必要はもうありません。少なくとも、「いい香り……です」よりはマシな答えが見つかるはずです。
 
-性格と香りの科学的な関係については[こちらの記事](/ja/blog/why-personality-matters-for-fragrance)で、時間帯による香りの感じ方の違いについては[嗅覚リズムの記事](/ja/blog/olfactory-circadian-rhythm-fragrance)で詳しく書いています。
+性格と香りの科学的な関係については[こちらの記事](/ja/blog/why-personality-matters-for-fragrance/)で、時間帯による香りの感じ方の違いについては[嗅覚リズムの記事](/ja/blog/olfactory-circadian-rhythm-fragrance/)で詳しく書いています。

@@ -6,7 +6,7 @@ lang: ko
 category: guide
 tags: ["공간 향기", "성격 진단", "선택 가이드", "입문자용"]
 featured: false
-canonical_url: "https://kaoriq.com/ko/blog/personality-type-first-room-fragrance-guide"
+canonical_url: "https://kaoriq.com/ko/blog/personality-type-first-room-fragrance-guide/"
 cross_posted_to: []
 ---
 
@@ -26,7 +26,7 @@ cross_posted_to: []
 
 심리학에서 재현성이 가장 높은 성격 모델 "Big Five"(개방성, 성실성, 외향성, 친화성, 신경증 성향의 5요인)와 향 취향의 관계를 조사한 연구가 여러 편 있습니다. *Flavour and Fragrance Journal*의 2015년 연구에 따르면, "개방성"이 높은 사람은 복잡하고 우디한 향을 선호하고, "친화성"이 높은 사람은 깨끗하고 플로럴한 향을 선택하는 경향이 있었습니다.
 
-완벽한 1:1 대응은 아닙니다. 하지만 "아무 단서도 없는" 상태보다는 훨씬 나은 출발점이 됩니다. 자세한 과학적 배경은 [이 글](/ko/blog/why-personality-matters-for-fragrance)에서 다루고 있습니다. 여기서는 실용적인 부분만 다루겠습니다.
+완벽한 1:1 대응은 아닙니다. 하지만 "아무 단서도 없는" 상태보다는 훨씬 나은 출발점이 됩니다. 자세한 과학적 배경은 [이 글](/ko/blog/why-personality-matters-for-fragrance/)에서 다루고 있습니다. 여기서는 실용적인 부분만 다루겠습니다.
 
 ## 3가지 질문으로 당신의 향 유형 찾기
 
@@ -118,7 +118,7 @@ cross_posted_to: []
 
 ### 침실 (6~10m2)
 
-후각 감도는 밤에 피크에 도달하기 때문에, 은은해도 충분히 향이 느껴집니다([상세 내용은 이 글 참조](/ko/blog/olfactory-circadian-rhythm-fragrance)). 라벤더 리드 디퓨저를 리드 적게 꽂아 놓거나, 취침 30분 전에 캔들을 켜서 15분 뒤 끄면 됩니다. 잔향만으로 밤에는 충분합니다. 감도가 높은 만큼, 너무 강한 향은 두통의 원인이 되니 주의하세요.
+후각 감도는 밤에 피크에 도달하기 때문에, 은은해도 충분히 향이 느껴집니다([상세 내용은 이 글 참조](/ko/blog/olfactory-circadian-rhythm-fragrance/)). 라벤더 리드 디퓨저를 리드 적게 꽂아 놓거나, 취침 30분 전에 캔들을 켜서 15분 뒤 끄면 됩니다. 잔향만으로 밤에는 충분합니다. 감도가 높은 만큼, 너무 강한 향은 두통의 원인이 되니 주의하세요.
 
 ### 작업 공간 (6~8m2)
 
@@ -141,4 +141,4 @@ cross_posted_to: []
 
 디퓨저 진열대 앞에서 30분 멈춰 설 필요는 이제 없습니다. 적어도 "좋은 향..이요"보다는 나은 대답을 찾을 수 있을 겁니다.
 
-성격과 향의 과학적 관계에 대해서는 [이 글](/ko/blog/why-personality-matters-for-fragrance)에서, 시간대에 따른 향의 느낌 차이에 대해서는 [후각 리듬 글](/ko/blog/olfactory-circadian-rhythm-fragrance)에서 자세히 다루고 있습니다.
+성격과 향의 과학적 관계에 대해서는 [이 글](/ko/blog/why-personality-matters-for-fragrance/)에서, 시간대에 따른 향의 느낌 차이에 대해서는 [후각 리듬 글](/ko/blog/olfactory-circadian-rhythm-fragrance/)에서 자세히 다루고 있습니다.

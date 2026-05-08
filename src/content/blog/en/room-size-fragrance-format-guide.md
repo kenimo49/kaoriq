@@ -6,7 +6,7 @@ lang: en
 category: guide
 tags: ["room-fragrance", "home-scenting", "practical-guide"]
 featured: false
-canonical_url: "https://kaoriq.com/blog/room-size-fragrance-format-guide"
+canonical_url: "https://kaoriq.com/blog/room-size-fragrance-format-guide/"
 cross_posted_to: []
 ---
 
@@ -102,7 +102,7 @@ Here's the part you can screenshot and send to a friend:
 
 ## Where This Goes
 
-The format question is just the first filter. Once you've matched your space to the right delivery mechanism, the actual scent you choose becomes the interesting part -- and that's where personality starts to matter. If you missed our piece on [why personality predicts fragrance preferences better than trends](/blog/why-personality-matters-for-fragrance), that's where we go deeper.
+The format question is just the first filter. Once you've matched your space to the right delivery mechanism, the actual scent you choose becomes the interesting part -- and that's where personality starts to matter. If you missed our piece on [why personality predicts fragrance preferences better than trends](/blog/why-personality-matters-for-fragrance/), that's where we go deeper.
 
 For now: measure your room. Pick the right format. Then worry about whether you're a sandalwood person or a bergamot one.
 

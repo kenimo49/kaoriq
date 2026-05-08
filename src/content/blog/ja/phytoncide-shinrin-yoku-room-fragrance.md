@@ -6,7 +6,7 @@ lang: ja
 category: science
 tags: ["フィトンチッド", "森林浴", "和の香り", "空間フレグランス"]
 featured: false
-canonical_url: "https://kaoriq.com/ja/blog/phytoncide-shinrin-yoku-room-fragrance"
+canonical_url: "https://kaoriq.com/ja/blog/phytoncide-shinrin-yoku-room-fragrance/"
 cross_posted_to: []
 ---
 
@@ -174,7 +174,7 @@ cross_posted_to: []
 
 森に行けない平日の夜、ヒノキの香りで一息つけるなら、それは決して気のせいではない。少なくとも宮崎教授の唾液コルチゾールデータは、そう示唆してくれています。
 
-香りを性格や気分から選ぶ話は、[こちらの記事](/ja/blog/why-personality-matters-for-fragrance)でも書いています。和の香りに惹かれる人は、たぶん「静けさ」を価値の中心に置いている人で、それは性格傾向でもある気がしています。
+香りを性格や気分から選ぶ話は、[こちらの記事](/ja/blog/why-personality-matters-for-fragrance/)でも書いています。和の香りに惹かれる人は、たぶん「静けさ」を価値の中心に置いている人で、それは性格傾向でもある気がしています。
 
 ---
 

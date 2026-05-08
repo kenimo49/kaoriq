@@ -6,7 +6,7 @@ lang: en
 category: guide
 tags: ["fragrance-layering", "home-scenting", "practical-guide"]
 featured: false
-canonical_url: "https://kaoriq.com/blog/home-fragrance-layering-guide"
+canonical_url: "https://kaoriq.com/blog/home-fragrance-layering-guide/"
 cross_posted_to: []
 ---
 
@@ -110,6 +110,6 @@ If after the reset it really does feel underscented, the right move is to **refr
 
 ## Where to Go From Here
 
-Layering gets much easier when you know what scent family suits you in the first place. If you're guessing -- and most people are -- start by figuring out [what kind of fragrance personality you have](/blog/why-personality-matters-for-fragrance), because that's the constant that makes every product choice afterwards simpler. And if you're not yet sure which format belongs in which room, the [room-size guide](/blog/room-size-fragrance-format-guide) is the prerequisite to all of this.
+Layering gets much easier when you know what scent family suits you in the first place. If you're guessing -- and most people are -- start by figuring out [what kind of fragrance personality you have](/blog/why-personality-matters-for-fragrance/), because that's the constant that makes every product choice afterwards simpler. And if you're not yet sure which format belongs in which room, the [room-size guide](/blog/room-size-fragrance-format-guide/) is the prerequisite to all of this.
 
 Two scents in one room, one decision at a time. Your sinuses, your wallet, and the friend who walks into your apartment will all thank you.

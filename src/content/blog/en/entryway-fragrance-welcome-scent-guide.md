@@ -6,7 +6,7 @@ lang: en
 category: guide
 tags: ["entryway-fragrance", "welcome-scent", "home-fragrance", "practical-guide"]
 featured: false
-canonical_url: "https://kaoriq.com/blog/entryway-fragrance-welcome-scent-guide"
+canonical_url: "https://kaoriq.com/blog/entryway-fragrance-welcome-scent-guide/"
 cross_posted_to: []
 ---
 
@@ -100,7 +100,7 @@ The four scenarios above tell you what *the room* needs. Personality tells you w
 - **Curious, novelty-seeking, "what's that smell?" types:** Unusual notes like fig, tomato leaf, smoked tea, vetiver. The entryway as a tiny mystery.
 - **Warm, harmony-seeking, host-by-default types:** Soft sweetness, vanilla-adjacent woods, baked-bread-but-not-literally accords. The entryway as a hug.
 
-If you've taken any version of a Big Five or similar personality test, you can probably spot yourself here in seconds. If you haven't, our [why personality predicts fragrance preferences](/blog/why-personality-matters-for-fragrance) piece is the deeper version of this argument.
+If you've taken any version of a Big Five or similar personality test, you can probably spot yourself here in seconds. If you haven't, our [why personality predicts fragrance preferences](/blog/why-personality-matters-for-fragrance/) piece is the deeper version of this argument.
 
 ## The Cheat Sheet
 

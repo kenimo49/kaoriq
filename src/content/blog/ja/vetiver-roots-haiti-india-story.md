@@ -6,7 +6,7 @@ lang: ja
 category: story
 tags: ["ベチバー", "香りの歴史", "ハイチ", "インド", "ウッディ", "ルームフレグランス"]
 featured: false
-canonical_url: "https://kaoriq.com/ja/blog/vetiver-roots-haiti-india-story"
+canonical_url: "https://kaoriq.com/ja/blog/vetiver-roots-haiti-india-story/"
 cross_posted_to: []
 ---
 
@@ -154,4 +154,4 @@ cross_posted_to: []
 
 ---
 
-香りに性格や気分を重ねて選びたくなったら、[なぜ朝と夜で「いい香り」が変わるのか](/ja/blog/olfactory-circadian-rhythm-fragrance) もあわせてどうぞ。素材ストーリーの続きを楽しみたい方には、[なぜラベンダーは「万能の香り」になったのか](/ja/blog/why-lavender-became-universal-fragrance) もおすすめです。
+香りに性格や気分を重ねて選びたくなったら、[なぜ朝と夜で「いい香り」が変わるのか](/ja/blog/olfactory-circadian-rhythm-fragrance/) もあわせてどうぞ。素材ストーリーの続きを楽しみたい方には、[なぜラベンダーは「万能の香り」になったのか](/ja/blog/why-lavender-became-universal-fragrance/) もおすすめです。

@@ -6,7 +6,7 @@ lang: fr
 category: story
 tags: ["lavande", "histoire des parfums", "Provence", "parfum d'ambiance"]
 featured: false
-canonical_url: "https://kaoriq.com/fr/blog/why-lavender-became-universal-fragrance"
+canonical_url: "https://kaoriq.com/fr/blog/why-lavender-became-universal-fragrance/"
 cross_posted_to: []
 ---
 
@@ -114,4 +114,4 @@ Ce soir, si un diffuseur dans votre salon libere un parfum de lavande, pretez-y 
 
 L'odeur du placard de grand-mere? C'est vrai aussi. Mais le gout de cette grand-mere est adosse a 2000 ans d'histoire.
 
-Pour en savoir plus sur la facon dont le rythme olfactif influence la perception des odeurs, consultez [cet article](/fr/blog/olfactory-circadian-rhythm-fragrance).
+Pour en savoir plus sur la facon dont le rythme olfactif influence la perception des odeurs, consultez [cet article](/fr/blog/olfactory-circadian-rhythm-fragrance/).

@@ -6,7 +6,7 @@ lang: ja
 category: science
 tags: ["嗅覚の科学", "サーカディアンリズム", "空間フレグランス"]
 featured: false
-canonical_url: "https://kaoriq.com/ja/blog/olfactory-circadian-rhythm-fragrance"
+canonical_url: "https://kaoriq.com/ja/blog/olfactory-circadian-rhythm-fragrance/"
 cross_posted_to: []
 ---
 
@@ -119,4 +119,4 @@ cross_posted_to: []
 
 自分の鼻の時計を知ること。それが、空間フレグランスを賢く使う第一歩です。少なくとも、「壊れた」と思ってディフューザーを買い替える前に。
 
-香りの選び方が性格で変わることについては、[こちらの記事](/ja/blog/why-personality-matters-for-fragrance)で詳しく書いています。
+香りの選び方が性格で変わることについては、[こちらの記事](/ja/blog/why-personality-matters-for-fragrance/)で詳しく書いています。

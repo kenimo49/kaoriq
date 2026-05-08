@@ -6,7 +6,7 @@ lang: ja
 category: science
 tags: ["嗅覚の科学", "記憶と香り", "プルースト効果"]
 featured: false
-canonical_url: "https://kaoriq.com/ja/blog/proust-effect-fragrance-memory"
+canonical_url: "https://kaoriq.com/ja/blog/proust-effect-fragrance-memory/"
 cross_posted_to: []
 ---
 
@@ -100,4 +100,4 @@ cross_posted_to: []
 
 あなたの暗号は、たぶんもう、どこかの香りに眠っています。
 
-香りと脳のリズムについては、[嗅覚の概日リズムの記事](/ja/blog/olfactory-circadian-rhythm-fragrance) でもう少し詳しく書いています。
+香りと脳のリズムについては、[嗅覚の概日リズムの記事](/ja/blog/olfactory-circadian-rhythm-fragrance/) でもう少し詳しく書いています。

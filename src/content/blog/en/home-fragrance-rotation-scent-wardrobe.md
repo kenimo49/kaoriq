@@ -6,7 +6,7 @@ lang: en
 category: guide
 tags: ["home-fragrance", "scent-wardrobe", "fragrance-rotation", "practical-guide"]
 featured: false
-canonical_url: "https://kaoriq.com/blog/home-fragrance-rotation-scent-wardrobe"
+canonical_url: "https://kaoriq.com/blog/home-fragrance-rotation-scent-wardrobe/"
 cross_posted_to: []
 ---
 
@@ -118,6 +118,6 @@ You don't need to overhaul your rotation four times a year. Just nudge it.
 
 If you already own one home fragrance product -- and most people do -- you already have one-third of a scent wardrobe. Decide whether it's your morning, evening, or weekend scent. Then add the one that creates the most contrast.
 
-If your current product is a woody candle, add a citrus diffuser for mornings. If it's a floral reed diffuser, add a warm candle for evenings. Not sure which format fits your space? We wrote [a guide on matching fragrance formats to room sizes](/blog/room-size-fragrance-format-guide) that covers the practical side.
+If your current product is a woody candle, add a citrus diffuser for mornings. If it's a floral reed diffuser, add a warm candle for evenings. Not sure which format fits your space? We wrote [a guide on matching fragrance formats to room sizes](/blog/room-size-fragrance-format-guide/) that covers the practical side.
 
 Two products is enough to start feeling the difference. The third is next month's excuse to go back to the shop.

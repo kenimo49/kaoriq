@@ -6,7 +6,7 @@ lang: en
 category: story
 tags: ["orris", "iris", "perfumery", "ingredients", "history"]
 featured: false
-canonical_url: "https://kaoriq.com/blog/orris-iris-root-luxury-perfume-story"
+canonical_url: "https://kaoriq.com/blog/orris-iris-root-luxury-perfume-story/"
 cross_posted_to: []
 og_image: "/images/blog/orris-iris-root-luxury-perfume-story/orris-six-year-journey.png"
 ---

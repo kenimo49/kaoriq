@@ -6,7 +6,7 @@ lang: en
 category: guide
 tags: ["home-office", "focus-fragrance", "work-from-home", "practical-guide"]
 featured: false
-canonical_url: "https://kaoriq.com/blog/home-office-fragrance-focus-guide"
+canonical_url: "https://kaoriq.com/blog/home-office-fragrance-focus-guide/"
 cross_posted_to: []
 ---
 
@@ -82,12 +82,12 @@ If your day is fragmented -- meetings, Slack threads, ticket triage, context-swi
 
 If your work is creative or strategic -- the kind that requires you to *not* be over-caffeinated and over-stimulated -- go **woody**. Cedar, cypress, or a soft vetiver. These give you a quiet baseline that lets the ideas surface without your nervous system shouting over them.
 
-And if none of that sounds like you, that's the actual point. Your fragrance preferences track your personality more reliably than any "top 10 productivity scents" list, which is why we built [a personality-based fragrance fit framework](/blog/why-personality-matters-for-fragrance) instead. The herbal-loving conscientious type and the citrus-loving extrovert want different things from a focus candle, and pretending otherwise just sells more candles people don't enjoy.
+And if none of that sounds like you, that's the actual point. Your fragrance preferences track your personality more reliably than any "top 10 productivity scents" list, which is why we built [a personality-based fragrance fit framework](/blog/why-personality-matters-for-fragrance/) instead. The herbal-loving conscientious type and the citrus-loving extrovert want different things from a focus candle, and pretending otherwise just sells more candles people don't enjoy.
 
 ## The One-Line Version
 
 Pick a scent that matches the *job* you're doing today, in a *format* that matches your room, and don't choose anything that smells like dessert. Rosemary for memory, bergamot for stress, cedar for calm. That's basically it.
 
-The rest is just figuring out which of those three is *your* one. And if you're not sure -- well, that's what the [personality piece](/blog/why-personality-matters-for-fragrance) is for. Start there. Then come back and pick the candle.
+The rest is just figuring out which of those three is *your* one. And if you're not sure -- well, that's what the [personality piece](/blog/why-personality-matters-for-fragrance/) is for. Start there. Then come back and pick the candle.
 
 Volta, by the way, closed in 2023. The biscotti are gone. But somewhere out there, a much better focus fragrance is waiting for you, and it almost certainly does not smell like baked goods.

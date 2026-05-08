@@ -6,7 +6,7 @@ lang: ja
 category: story
 tags: ["オリス", "アイリス", "香水の素材", "フィレンツェ", "調香"]
 featured: false
-canonical_url: "https://kaoriq.com/ja/blog/orris-iris-root-three-years-darkness"
+canonical_url: "https://kaoriq.com/ja/blog/orris-iris-root-three-years-darkness/"
 cross_posted_to: []
 ---
 
@@ -116,4 +116,4 @@ cross_posted_to: []
 
 ---
 
-オリスのような「上品で粉っぽい香り」が、なぜある人には深く響き、別の人には地味に感じられるのかについては、[こちらの記事](/ja/blog/why-personality-matters-for-fragrance)で詳しく書いています。
+オリスのような「上品で粉っぽい香り」が、なぜある人には深く響き、別の人には地味に感じられるのかについては、[こちらの記事](/ja/blog/why-personality-matters-for-fragrance/)で詳しく書いています。

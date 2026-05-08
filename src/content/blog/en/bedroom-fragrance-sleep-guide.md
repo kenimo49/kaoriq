@@ -6,7 +6,7 @@ lang: en
 category: guide
 tags: ["bedroom-fragrance", "sleep-friendly-scent", "pillow-mist", "practical-guide"]
 featured: false
-canonical_url: "https://kaoriq.com/blog/bedroom-fragrance-sleep-guide"
+canonical_url: "https://kaoriq.com/blog/bedroom-fragrance-sleep-guide/"
 cross_posted_to: []
 ---
 
@@ -184,7 +184,7 @@ Pick a base note (sandalwood, vetiver, chamomile, or neroli; lavender if you gen
 
 ## Where This Goes Next
 
-The right scent for your bedroom is closely tied to *who you are*: whether you're an overthinker, a light sleeper, or just someone who wants the room to feel cared-for. That overlap between personality and scent isn't accidental. If you missed our piece on [why personality predicts fragrance preferences better than trends](/blog/why-personality-matters-for-fragrance), it's the deeper version of the three sleeper types above.
+The right scent for your bedroom is closely tied to *who you are*: whether you're an overthinker, a light sleeper, or just someone who wants the room to feel cared-for. That overlap between personality and scent isn't accidental. If you missed our piece on [why personality predicts fragrance preferences better than trends](/blog/why-personality-matters-for-fragrance/), it's the deeper version of the three sleeper types above.
 
 For now: figure out which type you are, pick one family from the cheat sheet, and start with a reed diffuser before you commit to anything fancier. The bedside disco diffuser can wait until you've earned it.
 

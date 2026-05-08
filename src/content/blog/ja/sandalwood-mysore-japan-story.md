@@ -6,7 +6,7 @@ lang: ja
 category: story
 tags: ["白檀", "サンダルウッド", "香りの歴史", "マイソール", "仏教", "ルームフレグランス"]
 featured: false
-canonical_url: "https://kaoriq.com/ja/blog/sandalwood-mysore-japan-story"
+canonical_url: "https://kaoriq.com/ja/blog/sandalwood-mysore-japan-story/"
 cross_posted_to: []
 ---
 
@@ -128,4 +128,4 @@ cross_posted_to: []
 
 5000年生き残ってきたこの香りの一部に、あなたも今、参加しています。
 
-香りと記憶の関係については、[プルースト効果の記事](/ja/blog/proust-effect-fragrance-memory) でもう少し掘り下げています。素材の物語をもう一本、というときは [ラベンダーの2000年史](/ja/blog/why-lavender-became-universal-fragrance) もどうぞ。
+香りと記憶の関係については、[プルースト効果の記事](/ja/blog/proust-effect-fragrance-memory/) でもう少し掘り下げています。素材の物語をもう一本、というときは [ラベンダーの2000年史](/ja/blog/why-lavender-became-universal-fragrance/) もどうぞ。

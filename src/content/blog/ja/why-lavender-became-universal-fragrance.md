@@ -6,7 +6,7 @@ lang: ja
 category: story
 tags: ["ラベンダー", "香りの歴史", "プロヴァンス", "ルームフレグランス"]
 featured: false
-canonical_url: "https://kaoriq.com/ja/blog/why-lavender-became-universal-fragrance"
+canonical_url: "https://kaoriq.com/ja/blog/why-lavender-became-universal-fragrance/"
 cross_posted_to: []
 ---
 
@@ -114,4 +114,4 @@ cross_posted_to: []
 
 おばあちゃんのタンスの匂い？ まあ、それも間違いではありません。ただ、そのおばあちゃんの趣味は、2000年の歴史に裏打ちされています。
 
-嗅覚のリズムが香りの感じ方にどう関わるかについては、[こちらの記事](/ja/blog/olfactory-circadian-rhythm-fragrance)で詳しく書いています。
+嗅覚のリズムが香りの感じ方にどう関わるかについては、[こちらの記事](/ja/blog/olfactory-circadian-rhythm-fragrance/)で詳しく書いています。
