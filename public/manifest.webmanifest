@@ -1,0 +1,14 @@
+{
+  "name": "KaoriQ",
+  "short_name": "KaoriQ",
+  "description": "Data-driven fragrance recommendations powered by personality science.",
+  "start_url": "/",
+  "display": "minimal-ui",
+  "background_color": "#1A1714",
+  "theme_color": "#1A1714",
+  "icons": [
+    { "src": "/favicon.svg", "sizes": "any", "type": "image/svg+xml" },
+    { "src": "/favicon.png", "sizes": "192x192", "type": "image/png" },
+    { "src": "/og-image.png", "sizes": "1200x630", "type": "image/png", "purpose": "any" }
+  ]
+}

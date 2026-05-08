@@ -2,6 +2,7 @@
 import BaseLayout from '../../../layouts/BaseLayout.astro';
 import Nav from '../../../components/Nav.astro';
 import { getCollection } from 'astro:content';
+import { staticAlternates } from '../../../lib/alternates';
 
 const posts = (await getCollection('blog'))
   .filter(p => p.data.lang === 'fr')
@@ -13,6 +14,14 @@ const categories = [
   { key: 'science', label: 'Science', description: 'Pourquoi ce parfum fonctionne' },
   { key: 'story', label: 'Histoire', description: 'Culture, histoire et parfumeurs' },
 ] as const;
+
+const alternates = staticAlternates({
+  en: '/blog/',
+  ja: '/ja/blog/',
+  fr: '/fr/blog/',
+  pt: '/pt/blog/',
+  es: '/es/blog/',
+});
 ---
 
 <BaseLayout
@@ -21,12 +30,13 @@ const categories = [
   lang="fr"
   ogUrl="https://kaoriq.com/fr/blog/"
   ogDescription="Guides pour choisir vos parfums d'ambiance, science des odeurs et culture olfactive."
+  alternates={alternates}
 >
   <Nav lang="fr" current="blog" />
 
   <main style="max-width: 720px; margin: 0 auto; padding: 4rem 2rem;">
     <h1 style="font-size: 1.75rem; font-weight: 700; margin-bottom: 0.5rem;">Blog</h1>
-    <p style="color: var(--text-muted); font-size: 0.9rem; margin-bottom: 2rem;">Choisissez une categorie qui vous interesse.</p>
+    <p style="color: var(--text-muted); font-size: 0.9rem; margin-bottom: 2rem;">Choisissez une catégorie qui vous intéresse.</p>
 
     <div class="category-tabs" role="tablist">
       {categories.map(cat => (

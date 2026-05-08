@@ -1,0 +1,67 @@
+---
+import BaseLayout from '../layouts/BaseLayout.astro';
+import Nav from '../components/Nav.astro';
+import { staticAlternates } from '../lib/alternates';
+
+const alternates = staticAlternates({ en: '/contact/', ja: '/ja/contact/' });
+---
+
+<BaseLayout
+  title="Contact — KaoriQ"
+  description="Contact KaoriQ: business inquiries, press, content corrections, and privacy questions."
+  lang="en"
+  ogUrl="https://kaoriq.com/contact/"
+  ogDescription="Contact KaoriQ: business inquiries, press, content corrections, and privacy questions."
+  alternates={alternates}
+>
+  <Nav lang="en" current="" />
+
+  <main style="max-width: 720px; margin: 0 auto; padding: 4rem 2rem;">
+    <h1 style="font-size: 1.75rem; font-weight: 700; margin-bottom: 1rem;">Contact</h1>
+    <p style="color: var(--text-secondary); line-height: 1.85; margin-bottom: 2rem;">
+      KaoriQ is operated by Propel-Lab LLC. The fastest way to reach us is by email — please include enough context for us to act on your message.
+    </p>
+
+    <section style="margin-bottom: 2.5rem;">
+      <h2 style="font-size: 1.15rem; font-weight: 600; margin-bottom: 0.75rem;">By email</h2>
+      <p style="line-height: 1.8;">
+        General inquiries: <a href="mailto:info@propel-lab.co.jp">info@propel-lab.co.jp</a>
+      </p>
+      <p style="font-size: 0.9rem; color: var(--text-muted); margin-top: 0.5rem;">
+        Replies usually within 3–5 business days (Mon–Fri, JST). We answer in English or Japanese.
+      </p>
+    </section>
+
+    <section style="margin-bottom: 2.5rem;">
+      <h2 style="font-size: 1.15rem; font-weight: 600; margin-bottom: 0.75rem;">What to include</h2>
+      <ul style="line-height: 1.85; padding-left: 1.5rem; color: var(--text-secondary);">
+        <li><strong>Article correction or factual issue:</strong> the article URL and the specific claim or paragraph in question.</li>
+        <li><strong>Partnership / press / collaboration:</strong> who you are, what you have in mind, any deadline.</li>
+        <li><strong>Privacy / data request:</strong> what data you believe relates to you and how you'd like us to handle it.</li>
+        <li><strong>Topic suggestion:</strong> a couple of sentences on what you'd like us to cover and why.</li>
+      </ul>
+    </section>
+
+    <section>
+      <h2 style="font-size: 1.15rem; font-weight: 600; margin-bottom: 0.75rem;">Operator</h2>
+      <table style="width: 100%; border-collapse: collapse; font-size: 0.95rem;">
+        <tr style="border-bottom: 1px solid var(--text-separator);">
+          <td style="padding: 0.6rem 0; color: var(--text-muted); width: 35%;">Company</td>
+          <td style="padding: 0.6rem 0;">Propel-Lab LLC</td>
+        </tr>
+        <tr style="border-bottom: 1px solid var(--text-separator);">
+          <td style="padding: 0.6rem 0; color: var(--text-muted);">Representative</td>
+          <td style="padding: 0.6rem 0;">Ken Imoto</td>
+        </tr>
+        <tr style="border-bottom: 1px solid var(--text-separator);">
+          <td style="padding: 0.6rem 0; color: var(--text-muted);">Address</td>
+          <td style="padding: 0.6rem 0;">Tenjin First Bldg. 7F, 4-6-28 Tenjin, Chuo-ku, Fukuoka, Japan</td>
+        </tr>
+        <tr>
+          <td style="padding: 0.6rem 0; color: var(--text-muted);">Parent site</td>
+          <td style="padding: 0.6rem 0;"><a href="https://www.propel-lab.co.jp/">propel-lab.co.jp</a></td>
+        </tr>
+      </table>
+    </section>
+  </main>
+</BaseLayout>

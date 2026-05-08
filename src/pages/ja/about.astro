@@ -1,6 +1,9 @@
 ---
 import BaseLayout from '../../layouts/BaseLayout.astro';
 import Nav from '../../components/Nav.astro';
+import { staticAlternates } from '../../lib/alternates';
+
+const alternates = staticAlternates({ en: '/about/', ja: '/ja/about/' });
 ---
 
 <BaseLayout
@@ -9,6 +12,7 @@ import Nav from '../../components/Nav.astro';
   lang="ja"
   ogUrl="https://kaoriq.com/ja/about/"
   ogDescription="性格科学とAIで香りを提案するデータ駆動型のフレグランス推薦プラットフォーム。"
+  alternates={alternates}
 >
   <Nav lang="ja" current="about" />
 
@@ -50,9 +54,13 @@ import Nav from '../../components/Nav.astro';
         </tr>
         <tr>
           <td style="padding: 0.6rem 0; color: var(--text-muted);">連絡先</td>
-          <td style="padding: 0.6rem 0;"><a href="mailto:info@propel-lab.co.jp" style="color: var(--link-color);">info@propel-lab.co.jp</a></td>
+          <td style="padding: 0.6rem 0;"><a href="/ja/contact/" style="color: var(--link-color);">お問い合わせフォーム</a></td>
         </tr>
       </table>
+
+      <p style="margin-top: 1.5rem; font-size: 0.9rem; color: var(--text-muted);">
+        参考: <a href="/ja/privacy/" style="color: var(--link-color);">プライバシーポリシー</a>
+      </p>
     </div>
   </main>
 </BaseLayout>

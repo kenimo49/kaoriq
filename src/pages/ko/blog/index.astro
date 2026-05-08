@@ -2,10 +2,20 @@
 import BaseLayout from '../../../layouts/BaseLayout.astro';
 import Nav from '../../../components/Nav.astro';
 import { getCollection } from 'astro:content';
+import { staticAlternates } from '../../../lib/alternates';
 
 const posts = (await getCollection('blog'))
   .filter(p => p.data.lang === 'ko')
   .sort((a, b) => b.data.date.getTime() - a.data.date.getTime());
+
+const alternates = staticAlternates({
+  en: '/blog/',
+  ja: '/ja/blog/',
+  fr: '/fr/blog/',
+  pt: '/pt/blog/',
+  es: '/es/blog/',
+  ko: '/ko/blog/',
+});
 
 const categories = [
   { key: 'all', label: '전체' },
@@ -21,6 +31,7 @@ const categories = [
   lang="ko"
   ogUrl="https://kaoriq.com/ko/blog/"
   ogDescription="향 선택 가이드, 향의 과학, 향 문화에 관한 글."
+  alternates={alternates}
 >
   <Nav lang="ko" current="blog" />
 

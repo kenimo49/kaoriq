@@ -2,31 +2,41 @@
 import BaseLayout from '../../../layouts/BaseLayout.astro';
 import Nav from '../../../components/Nav.astro';
 import { getCollection } from 'astro:content';
+import { staticAlternates } from '../../../lib/alternates';
 
 const posts = (await getCollection('blog'))
   .filter(p => p.data.lang === 'es')
   .sort((a, b) => b.data.date.getTime() - a.data.date.getTime());
 
+const alternates = staticAlternates({
+  en: '/blog/',
+  ja: '/ja/blog/',
+  fr: '/fr/blog/',
+  pt: '/pt/blog/',
+  es: '/es/blog/',
+});
+
 const categories = [
   { key: 'all', label: 'Todos' },
-  { key: 'guide', label: 'Guia', description: 'Encuentra la fragancia ideal para ti' },
-  { key: 'science', label: 'Ciencia', description: 'Por que esa fragancia funciona' },
+  { key: 'guide', label: 'Guía', description: 'Encuentra la fragancia ideal para ti' },
+  { key: 'science', label: 'Ciencia', description: 'Por qué esa fragancia funciona' },
   { key: 'story', label: 'Historia', description: 'Cultura, historia y perfumistas' },
 ] as const;
 ---
 
 <BaseLayout
   title="Blog — KaoriQ"
-  description="Guias para elegir fragancias de ambiente, ciencia de los aromas y cultura olfativa."
+  description="Guías para elegir fragancias de ambiente, ciencia de los aromas y cultura olfativa."
   lang="es"
   ogUrl="https://kaoriq.com/es/blog/"
-  ogDescription="Guias para elegir fragancias de ambiente, ciencia de los aromas y cultura olfativa."
+  ogDescription="Guías para elegir fragancias de ambiente, ciencia de los aromas y cultura olfativa."
+  alternates={alternates}
 >
   <Nav lang="es" current="blog" />
 
   <main style="max-width: 720px; margin: 0 auto; padding: 4rem 2rem;">
     <h1 style="font-size: 1.75rem; font-weight: 700; margin-bottom: 0.5rem;">Blog</h1>
-    <p style="color: var(--text-muted); font-size: 0.9rem; margin-bottom: 2rem;">Elige una categoria que te interese.</p>
+    <p style="color: var(--text-muted); font-size: 0.9rem; margin-bottom: 2rem;">Elige una categoría que te interese.</p>
 
     <div class="category-tabs" role="tablist">
       {categories.map(cat => (
@@ -52,7 +62,7 @@ const categories = [
             <div style="display: flex; align-items: center; gap: 0.5rem; margin-bottom: 0.35rem;">
               <span class={`category-badge category-${post.data.category}`}>{
                 post.data.category === 'science' ? 'Ciencia' :
-                post.data.category === 'guide' ? 'Guia' : 'Historia'
+                post.data.category === 'guide' ? 'Guía' : 'Historia'
               }</span>
               <h2 style="font-size: 1.1rem; font-weight: 600; margin: 0;">{post.data.title}</h2>
             </div>
@@ -65,7 +75,7 @@ const categories = [
       ))}
     </div>
 
-    <p class="no-posts" style="color: var(--text-muted); display: none;">Aun no hay articulos en esta categoria.</p>
+    <p class="no-posts" style="color: var(--text-muted); display: none;">Aún no hay artículos en esta categoría.</p>
   </main>
 </BaseLayout>
 

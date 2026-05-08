@@ -29,12 +29,10 @@ const blogIndexUrl = lang === 'ja' ? '/ja/blog/' : '/blog/';
   ogUrl={canonicalUrl}
   ogDescription={description}
   ogImage={ogImage}
+  ogType="article"
+  alternates={alternates}
 >
   <Fragment slot="head">
-    {alternates.map(alt => (
-      <link rel="alternate" hreflang={alt.hreflang} href={alt.href} />
-    ))}
-    <meta property="og:type" content="article" />
     <meta property="article:published_time" content={date.toISOString()} />
     {tags.map(tag => <meta property="article:tag" content={tag} />)}
     <script type="application/ld+json" set:html={JSON.stringify({
@@ -42,7 +40,9 @@ const blogIndexUrl = lang === 'ja' ? '/ja/blog/' : '/blog/';
       "@type": "BlogPosting",
       "headline": title,
       "description": description,
+      "image": ogImage || "https://kaoriq.com/og-image.png",
       "datePublished": date.toISOString(),
+      "dateModified": date.toISOString(),
       "author": {
         "@type": "Organization",
         "name": "KaoriQ",
@@ -51,9 +51,14 @@ const blogIndexUrl = lang === 'ja' ? '/ja/blog/' : '/blog/';
       "publisher": {
         "@type": "Organization",
         "name": "KaoriQ",
+        "logo": {
+          "@type": "ImageObject",
+          "url": "https://kaoriq.com/og-image.png"
+        }
       },
       "url": canonicalUrl,
       "mainEntityOfPage": canonicalUrl,
+      "inLanguage": lang,
       "keywords": tags.join(', '),
     })} />
     <style>
@@ -195,7 +200,7 @@ const blogIndexUrl = lang === 'ja' ? '/ja/blog/' : '/blog/';
     </style>
   </Fragment>
 
-  <Nav lang={lang} current="blog" />
+  <Nav lang={lang} current="blog" alternates={alternates} />
 
   <main style="max-width: 720px; margin: 0 auto; padding: 4rem 2rem;">
     <article>
@@ -245,19 +250,19 @@ const blogIndexUrl = lang === 'ja' ? '/ja/blog/' : '/blog/';
         <p class="feedback-question">{
           lang === 'ja' ? 'この記事は役に立ちましたか？' :
           lang === 'ko' ? '이 글이 도움이 되었나요?' :
-          lang === 'fr' ? 'Cet article vous a-t-il aide ?' :
-          lang === 'pt' ? 'Este artigo foi util?' :
-          lang === 'es' ? 'Te resulto util este articulo?' :
+          lang === 'fr' ? 'Cet article vous a-t-il aidé ?' :
+          lang === 'pt' ? 'Este artigo foi útil?' :
+          lang === 'es' ? '¿Te resultó útil este artículo?' :
           'Was this article helpful?'
         }</p>
         <div class="feedback-buttons">
           <button class="feedback-btn" data-reaction="helpful" aria-label="Helpful">
             <span class="feedback-icon">&#9650;</span>
-            <span>{lang === 'ja' ? 'はい' : lang === 'ko' ? '네' : lang === 'fr' ? 'Oui' : lang === 'pt' ? 'Sim' : lang === 'es' ? 'Si' : 'Yes'}</span>
+            <span>{lang === 'ja' ? 'はい' : lang === 'ko' ? '네' : lang === 'fr' ? 'Oui' : lang === 'pt' ? 'Sim' : lang === 'es' ? 'Sí' : 'Yes'}</span>
           </button>
           <button class="feedback-btn" data-reaction="not_helpful" aria-label="Not helpful">
             <span class="feedback-icon">&#9660;</span>
-            <span>{lang === 'ja' ? 'いいえ' : lang === 'ko' ? '아니요' : lang === 'fr' ? 'Non' : lang === 'pt' ? 'Nao' : lang === 'es' ? 'No' : 'No'}</span>
+            <span>{lang === 'ja' ? 'いいえ' : lang === 'ko' ? '아니요' : lang === 'fr' ? 'Non' : lang === 'pt' ? 'Não' : lang === 'es' ? 'No' : 'No'}</span>
           </button>
         </div>
         <p class="feedback-thanks" style="display: none;">{
@@ -265,7 +270,7 @@ const blogIndexUrl = lang === 'ja' ? '/ja/blog/' : '/blog/';
           lang === 'ko' ? '의견 감사합니다' :
           lang === 'fr' ? 'Merci pour votre retour' :
           lang === 'pt' ? 'Obrigado pelo seu feedback' :
-          lang === 'es' ? 'Gracias por tu opinion' :
+          lang === 'es' ? 'Gracias por tu opinión' :
           'Thank you for your feedback'
         }</p>
       </div>

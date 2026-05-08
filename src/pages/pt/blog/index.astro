@@ -2,31 +2,42 @@
 import BaseLayout from '../../../layouts/BaseLayout.astro';
 import Nav from '../../../components/Nav.astro';
 import { getCollection } from 'astro:content';
+import { staticAlternates } from '../../../lib/alternates';
 
 const posts = (await getCollection('blog'))
   .filter(p => p.data.lang === 'pt')
   .sort((a, b) => b.data.date.getTime() - a.data.date.getTime());
 
+const alternates = staticAlternates({
+  en: '/blog/',
+  ja: '/ja/blog/',
+  fr: '/fr/blog/',
+  pt: '/pt/blog/',
+  es: '/es/blog/',
+});
+
 const categories = [
   { key: 'all', label: 'Todos' },
-  { key: 'guide', label: 'Guia', description: 'Encontre a fragrancia ideal para voce' },
-  { key: 'science', label: 'Ciencia', description: 'Por que essa fragrancia funciona' },
-  { key: 'story', label: 'Historia', description: 'Cultura, historia e perfumistas' },
+  { key: 'guide', label: 'Guia', description: 'Encontre a fragrância ideal para você' },
+  { key: 'science', label: 'Ciência', description: 'Por que essa fragrância funciona' },
+  { key: 'story', label: 'História', description: 'Cultura, história e perfumistas' },
 ] as const;
 ---
 
 <BaseLayout
   title="Blog — KaoriQ"
-  description="Guias para escolher fragrancias de ambiente, ciencia dos aromas e cultura olfativa."
+  description="Guias para escolher fragrâncias de ambiente, ciência dos aromas e cultura olfativa."
   lang="pt"
   ogUrl="https://kaoriq.com/pt/blog/"
-  ogDescription="Guias para escolher fragrancias de ambiente, ciencia dos aromas e cultura olfativa."
+  ogDescription="Guias para escolher fragrâncias de ambiente, ciência dos aromas e cultura olfativa."
+  alternates={alternates}
 >
   <Nav lang="pt" current="blog" />
 
   <main style="max-width: 720px; margin: 0 auto; padding: 4rem 2rem;">
     <h1 style="font-size: 1.75rem; font-weight: 700; margin-bottom: 0.5rem;">Blog</h1>
     <p style="color: var(--text-muted); font-size: 0.9rem; margin-bottom: 2rem;">Escolha uma categoria do seu interesse.</p>
+
 
     <div class="category-tabs" role="tablist">
       {categories.map(cat => (
@@ -51,8 +62,8 @@ const categories = [
           <article style="padding: 1rem 0; border-bottom: 1px solid var(--text-separator);">
             <div style="display: flex; align-items: center; gap: 0.5rem; margin-bottom: 0.35rem;">
               <span class={`category-badge category-${post.data.category}`}>{
-                post.data.category === 'science' ? 'Ciencia' :
-                post.data.category === 'guide' ? 'Guia' : 'Historia'
+                post.data.category === 'science' ? 'Ciência' :
+                post.data.category === 'guide' ? 'Guia' : 'História'
               }</span>
               <h2 style="font-size: 1.1rem; font-weight: 600; margin: 0;">{post.data.title}</h2>
             </div>
@@ -65,7 +76,7 @@ const categories = [
       ))}
     </div>
 
-    <p class="no-posts" style="color: var(--text-muted); display: none;">Ainda nao ha artigos nesta categoria.</p>
+    <p class="no-posts" style="color: var(--text-muted); display: none;">Ainda não há artigos nesta categoria.</p>
   </main>
 </BaseLayout>
 

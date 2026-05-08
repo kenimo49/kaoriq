@@ -2,6 +2,7 @@
 import BaseLayout from '../../../layouts/BaseLayout.astro';
 import Nav from '../../../components/Nav.astro';
 import { getCollection } from 'astro:content';
+import { staticAlternates } from '../../../lib/alternates';
 
 const posts = (await getCollection('blog'))
   .filter(p => p.data.lang === 'ja')
@@ -13,6 +14,14 @@ const categories = [
   { key: 'science', label: '香りの科学', description: 'なぜその香りがいいのか' },
   { key: 'story', label: '香りの世界', description: '文化・歴史・調香師の話' },
 ] as const;
+
+const alternates = staticAlternates({
+  en: '/blog/',
+  ja: '/ja/blog/',
+  fr: '/fr/blog/',
+  pt: '/pt/blog/',
+  es: '/es/blog/',
+});
 ---
 
 <BaseLayout
@@ -21,12 +30,13 @@ const categories = [
   lang="ja"
   ogUrl="https://kaoriq.com/ja/blog/"
   ogDescription="香りの選び方ガイド、香りの科学、香り文化についての記事。"
+  alternates={alternates}
 >
   <Nav lang="ja" current="blog" />
 
   <main style="max-width: 720px; margin: 0 auto; padding: 4rem 2rem;">
     <h1 style="font-size: 1.75rem; font-weight: 700; margin-bottom: 0.5rem;">ブログ</h1>
-    <p style="color: var(--text-muted); font-size: 0.9rem; margin-bottom: 2rem;">興味のあるカテゴリを選んでください。</p>
+    <p style="color: var(--text-muted); font-size: 0.9rem; margin-bottom: 2rem;">興味のあるカテゴリを選んでください。カテゴリ別: <a href="/ja/blog/category/guide/">選び方ガイド</a> · <a href="/ja/blog/category/science/">香りの科学</a> · <a href="/ja/blog/category/story/">香りの世界</a></p>
 
     <div class="category-tabs" role="tablist">
       {categories.map(cat => (

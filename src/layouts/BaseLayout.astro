@@ -1,4 +1,6 @@
 ---
+import type { Alternate } from '../lib/alternates';
+
 interface Props {
   title: string;
   description: string;
@@ -6,10 +8,38 @@ interface Props {
   ogUrl: string;
   ogDescription: string;
   ogImage?: string;
+  ogType?: 'website' | 'article';
+  alternates?: Alternate[];
+  /** デフォルト false。トップページなど SiteEntity を埋め込みたい場合に true */
+  isHome?: boolean;
 }
 
-const { title, description, lang, ogUrl, ogDescription, ogImage } = Astro.props;
+const { title, description, lang, ogUrl, ogDescription, ogImage, ogType = 'website', alternates = [], isHome = false } = Astro.props;
 const resolvedOgImage = ogImage || "https://kaoriq.com/og-image.png";
+
+const orgSchema = {
+  "@context": "https://schema.org",
+  "@type": "Organization",
+  "name": "KaoriQ",
+  "url": "https://kaoriq.com",
+  "logo": "https://kaoriq.com/og-image.png",
+  "sameAs": ["https://kaoriq.com"],
+  "parentOrganization": {
+    "@type": "Organization",
+    "name": "Propel-Lab LLC",
+    "url": "https://www.propel-lab.co.jp/",
+  },
+};
+
+const websiteSchema = {
+  "@context": "https://schema.org",
+  "@type": "WebSite",
+  "name": "KaoriQ",
+  "url": "https://kaoriq.com",
+  "description": "Data-driven fragrance recommendations powered by personality science.",
+  "inLanguage": ["en", "ja", "fr", "pt", "es"],
+  "publisher": { "@id": "https://kaoriq.com#org" },
+};
 ---
 
 <!doctype html>
@@ -22,6 +52,10 @@ const resolvedOgImage = ogImage || "https://kaoriq.com/og-image.png";
     <link rel="canonical" href={ogUrl} />
     <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
     <link rel="icon" type="image/png" href="/favicon.png" />
+    <link rel="apple-touch-icon" href="/favicon.png" />
+    <meta name="theme-color" content="#1A1714" media="(prefers-color-scheme: dark)" />
+    <meta name="theme-color" content="#FAF7F2" media="(prefers-color-scheme: light)" />
+    <link rel="manifest" href="/manifest.webmanifest" />
     <!-- Google Analytics -->
     <script is:inline async src="https://www.googletagmanager.com/gtag/js?id=G-JQT8YQS2GL"></script>
     <script is:inline>
@@ -34,8 +68,11 @@ const resolvedOgImage = ogImage || "https://kaoriq.com/og-image.png";
     <meta property="og:description" content={ogDescription} />
     <meta property="og:image" content={resolvedOgImage} />
     <meta property="og:url" content={ogUrl} />
-    <meta property="og:type" content="website" />
+    <meta property="og:type" content={ogType} />
     <meta property="og:site_name" content="KaoriQ" />
+    {alternates.map(alt => (
+      <link rel="alternate" hreflang={alt.hreflang} href={alt.href} />
+    ))}
     <meta name="twitter:card" content="summary_large_image" />
     <meta name="twitter:title" content={title} />
     <meta name="twitter:description" content={ogDescription} />
@@ -50,6 +87,12 @@ const resolvedOgImage = ogImage || "https://kaoriq.com/og-image.png";
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,600;0,700;1,400&family=DM+Sans:wght@400;500;600;700&display=swap" rel="stylesheet" />
+    {isHome && (
+      <>
+        <script type="application/ld+json" set:html={JSON.stringify({ ...orgSchema, "@id": "https://kaoriq.com#org" })} />
+        <script type="application/ld+json" set:html={JSON.stringify(websiteSchema)} />
+      </>
+    )}
     <slot name="head" />
     <style>
       @import "tailwindcss";
@@ -130,10 +173,56 @@ const resolvedOgImage = ogImage || "https://kaoriq.com/og-image.png";
           padding: 1.5rem 1rem !important;
         }
       }
+
+      footer.site-footer {
+        max-width: 720px;
+        margin: 4rem auto 0;
+        padding: 2rem 2rem 3rem;
+        border-top: 1px solid var(--text-separator);
+        font-size: 0.8rem;
+        color: var(--text-muted);
+        display: flex;
+        flex-wrap: wrap;
+        gap: 1.25rem;
+        justify-content: space-between;
+        align-items: center;
+      }
+      footer.site-footer a {
+        color: var(--text-label);
+        text-decoration: none;
+      }
+      footer.site-footer a:hover {
+        color: var(--text-primary);
+      }
+      footer.site-footer .footer-links {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 1rem;
+      }
     </style>
   </head>
   <body>
     <slot />
+    <footer class="site-footer">
+      <span>&copy; {new Date().getFullYear()} Propel-Lab LLC</span>
+      <div class="footer-links">
+        {lang === 'ja' ? (
+          <>
+            <a href="/ja/about/">運営</a>
+            <a href="/ja/privacy/">プライバシー</a>
+            <a href="/ja/contact/">お問い合わせ</a>
+            <a href="/ja/blog.xml">RSS</a>
+          </>
+        ) : (
+          <>
+            <a href="/about/">About</a>
+            <a href="/privacy/">Privacy</a>
+            <a href="/contact/">Contact</a>
+            <a href="/blog.xml">RSS</a>
+          </>
+        )}
+      </div>
+    </footer>
     <script is:inline>
       document.addEventListener('DOMContentLoaded', function() {
         var btn = document.getElementById('theme-toggle');

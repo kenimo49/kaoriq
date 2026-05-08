@@ -1,0 +1,67 @@
+---
+import BaseLayout from '../../layouts/BaseLayout.astro';
+import Nav from '../../components/Nav.astro';
+import { staticAlternates } from '../../lib/alternates';
+
+const alternates = staticAlternates({ en: '/contact/', ja: '/ja/contact/' });
+---
+
+<BaseLayout
+  title="お問い合わせ — KaoriQ"
+  description="KaoriQへのお問い合わせ。取材、提携、記事の訂正依頼、プライバシーに関するご質問など。"
+  lang="ja"
+  ogUrl="https://kaoriq.com/ja/contact/"
+  ogDescription="KaoriQへのお問い合わせ窓口。"
+  alternates={alternates}
+>
+  <Nav lang="ja" current="" />
+
+  <main style="max-width: 720px; margin: 0 auto; padding: 4rem 2rem;">
+    <h1 style="font-size: 1.75rem; font-weight: 700; margin-bottom: 1rem;">お問い合わせ</h1>
+    <p style="color: var(--text-secondary); line-height: 1.85; margin-bottom: 2rem;">
+      KaoriQは合同会社Propel-Labが運営しています。メールでのご連絡が最もスムーズです。対応に十分な背景を添えてお送りください。
+    </p>
+
+    <section style="margin-bottom: 2.5rem;">
+      <h2 style="font-size: 1.15rem; font-weight: 600; margin-bottom: 0.75rem;">メール窓口</h2>
+      <p style="line-height: 1.8;">
+        全般のお問い合わせ: <a href="mailto:info@propel-lab.co.jp">info@propel-lab.co.jp</a>
+      </p>
+      <p style="font-size: 0.9rem; color: var(--text-muted); margin-top: 0.5rem;">
+        返信は通常 3〜5 営業日以内（平日・JST）。日本語または英語で対応します。
+      </p>
+    </section>
+
+    <section style="margin-bottom: 2.5rem;">
+      <h2 style="font-size: 1.15rem; font-weight: 600; margin-bottom: 0.75rem;">お知らせいただきたい内容</h2>
+      <ul style="line-height: 1.85; padding-left: 1.5rem; color: var(--text-secondary);">
+        <li><strong>記事の訂正・事実関係のご指摘</strong>: 該当記事のURLと、対象となる記述・段落をお書きください。</li>
+        <li><strong>提携・取材・コラボレーション</strong>: 概要、想定スケジュール、貴社の所属。</li>
+        <li><strong>プライバシー・データに関するご依頼</strong>: 関係するデータの内容と、ご希望の取扱い。</li>
+        <li><strong>取材してほしいテーマの提案</strong>: 取り上げてほしい題材と、その理由を数行で。</li>
+      </ul>
+    </section>
+
+    <section>
+      <h2 style="font-size: 1.15rem; font-weight: 600; margin-bottom: 0.75rem;">運営情報</h2>
+      <table style="width: 100%; border-collapse: collapse; font-size: 0.95rem;">
+        <tr style="border-bottom: 1px solid var(--text-separator);">
+          <td style="padding: 0.6rem 0; color: var(--text-muted); width: 35%;">運営会社</td>
+          <td style="padding: 0.6rem 0;">合同会社 Propel-Lab</td>
+        </tr>
+        <tr style="border-bottom: 1px solid var(--text-separator);">
+          <td style="padding: 0.6rem 0; color: var(--text-muted);">代表</td>
+          <td style="padding: 0.6rem 0;">井本 賢</td>
+        </tr>
+        <tr style="border-bottom: 1px solid var(--text-separator);">
+          <td style="padding: 0.6rem 0; color: var(--text-muted);">所在地</td>
+          <td style="padding: 0.6rem 0;">〒810-0001 福岡県福岡市中央区天神4丁目6-28 天神ファーストビル7階</td>
+        </tr>
+        <tr>
+          <td style="padding: 0.6rem 0; color: var(--text-muted);">親サイト</td>
+          <td style="padding: 0.6rem 0;"><a href="https://www.propel-lab.co.jp/">propel-lab.co.jp</a></td>
+        </tr>
+      </table>
+    </section>
+  </main>
+</BaseLayout>

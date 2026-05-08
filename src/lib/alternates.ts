@@ -41,3 +41,20 @@ export function blogAlternates(
 
   return alternates;
 }
+
+/**
+ * 静的ページ用のhreflang。各言語版が存在するページパスのマップを渡す。
+ * 例: staticAlternates({ en: '/', ja: '/ja/' })
+ */
+export function staticAlternates(paths: Partial<Record<Lang, string>>): Alternate[] {
+  const entries = (Object.entries(paths) as [Lang, string][])
+    .filter(([, p]) => Boolean(p));
+  if (entries.length === 0) return [];
+  const list: Alternate[] = entries.map(([lang, path]) => ({
+    hreflang: lang,
+    href: `https://kaoriq.com${path}`,
+  }));
+  const fallback = entries.find(([l]) => l === 'en') ?? entries[0];
+  list.push({ hreflang: 'x-default', href: `https://kaoriq.com${fallback[1]}` });
+  return list;
+}

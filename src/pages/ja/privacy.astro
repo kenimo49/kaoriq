@@ -1,0 +1,76 @@
+---
+import BaseLayout from '../../layouts/BaseLayout.astro';
+import Nav from '../../components/Nav.astro';
+import { staticAlternates } from '../../lib/alternates';
+
+const alternates = staticAlternates({ en: '/privacy/', ja: '/ja/privacy/' });
+const updated = '2026-05-08';
+---
+
+<BaseLayout
+  title="プライバシーポリシー — KaoriQ"
+  description="KaoriQのプライバシーポリシー。収集するデータと目的、オプトアウト方法について。"
+  lang="ja"
+  ogUrl="https://kaoriq.com/ja/privacy/"
+  ogDescription="KaoriQのプライバシーポリシー。"
+  alternates={alternates}
+>
+  <Nav lang="ja" current="" />
+
+  <main style="max-width: 720px; margin: 0 auto; padding: 4rem 2rem;">
+    <h1 style="font-size: 1.75rem; font-weight: 700; margin-bottom: 0.5rem;">プライバシーポリシー</h1>
+    <p style="color: var(--text-muted); font-size: 0.85rem; margin-bottom: 2rem;">最終更新: {updated}</p>
+
+    <div style="line-height: 1.85; color: var(--text-secondary);">
+      <p style="margin-bottom: 1.25rem;">
+        KaoriQ（以下「当サイト」）は合同会社Propel-Lab（以下「当社」）が運営しています。本ページでは、kaoriq.com を訪問した際に当社が収集する情報、その目的、オプトアウト手段について説明します。記述は具体的に、簡潔に保つことを心がけています。
+      </p>
+
+      <h2 style="font-size: 1.25rem; font-weight: 600; color: var(--text-primary); margin: 2rem 0 0.75rem;">1. 収集する情報</h2>
+      <p style="margin-bottom: 0.75rem;">当サイトで収集するのは以下のみです:</p>
+      <ul style="padding-left: 1.5rem; margin: 0.75rem 0 1.25rem;">
+        <li><strong>Google Analytics 4 による訪問統計</strong>（ページURL、リファラー、国・地域、デバイス種別、言語、匿名化されたセッション情報）。GA4 は <code>_ga</code> および <code>_ga_JQT8YQS2GL</code> Cookie を使用します。</li>
+        <li><strong>記事フィードバック</strong> — 記事下の「役に立った／立たなかった」ボタンを押すと、押されたボタン・記事スラッグ・カテゴリ情報が GA4 イベントとして記録されます。個人を特定する情報は送信しません。</li>
+        <li><strong>テーマ設定</strong> — ダーク／ライト切替の選択は、ブラウザの <code>localStorage</code> に保存されます。お使いのデバイスから外部に送信されることはありません。</li>
+      </ul>
+      <p style="margin-bottom: 1.25rem;">
+        現時点では、当社独自のニュースレター、会員機能、購入フローはありません。当サイトから氏名、メールアドレス、決済情報を収集することはありません。
+      </p>
+
+      <h2 style="font-size: 1.25rem; font-weight: 600; color: var(--text-primary); margin: 2rem 0 0.75rem;">2. 収集の目的</h2>
+      <ul style="padding-left: 1.5rem; margin: 0.75rem 0 1.25rem;">
+        <li>どの記事が役に立っているかを理解し、有用なテーマに注力するため。</li>
+        <li>訪問者がどのように当サイトに到達したか（検索、リファラー、言語）を把握するため。</li>
+        <li>ページの不具合や翻訳の欠落をデバッグするため。</li>
+      </ul>
+
+      <h2 style="font-size: 1.25rem; font-weight: 600; color: var(--text-primary); margin: 2rem 0 0.75rem;">3. 第三者サービス</h2>
+      <p style="margin-bottom: 1.25rem;">当サイトでは以下のサービスを利用しています:</p>
+      <ul style="padding-left: 1.5rem; margin: 0.75rem 0 1.25rem;">
+        <li><strong>Google Analytics 4</strong> — 詳細は <a href="https://policies.google.com/privacy" rel="noopener" target="_blank">Googleプライバシーポリシー</a> をご確認ください。</li>
+        <li><strong>Google Fonts</strong> — フォントは <code>fonts.googleapis.com</code> から読み込まれます。</li>
+        <li><strong>GitHub Pages</strong> — 当サイト本体は GitHub Pages 上にホストされています。標準的なサーバログが残ります。</li>
+      </ul>
+
+      <h2 style="font-size: 1.25rem; font-weight: 600; color: var(--text-primary); margin: 2rem 0 0.75rem;">4. Cookieとオプトアウト</h2>
+      <p style="margin-bottom: 1.25rem;">
+        Google Analyticsは、公式の <a href="https://tools.google.com/dlpage/gaoptout" rel="noopener" target="_blank">GAオプトアウトアドオン</a> や、<code>googletagmanager.com</code> からのCookieをブラウザでブロックすることで無効化できます。無効化しても、当サイトの閲覧自体に支障はありません。
+      </p>
+
+      <h2 style="font-size: 1.25rem; font-weight: 600; color: var(--text-primary); margin: 2rem 0 0.75rem;">5. データの保持期間と利用者の権利</h2>
+      <p style="margin-bottom: 1.25rem;">
+        GA4のデータはGoogleの標準保持期間に従って保持されます。当社は個人を特定できる情報を取得していないため、特定の利用者の訪問データを照会することはできません。データに関するご懸念がある場合は、下記のお問い合わせ先までご連絡ください。
+      </p>
+
+      <h2 style="font-size: 1.25rem; font-weight: 600; color: var(--text-primary); margin: 2rem 0 0.75rem;">6. ポリシーの改定</h2>
+      <p style="margin-bottom: 1.25rem;">
+        データの取扱いを追加・変更した際には本ページを更新します。最新の改定日は冒頭の「最終更新」に記載しています。
+      </p>
+
+      <h2 style="font-size: 1.25rem; font-weight: 600; color: var(--text-primary); margin: 2rem 0 0.75rem;">7. お問い合わせ</h2>
+      <p style="margin-bottom: 1.25rem;">
+        本ポリシーに関するご質問は、<a href="/ja/contact/">お問い合わせページ</a> よりご連絡ください。
+      </p>
+    </div>
+  </main>
+</BaseLayout>

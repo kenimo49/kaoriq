@@ -1,18 +1,31 @@
 ---
+import type { Alternate } from '../lib/alternates';
+
 interface Props {
   lang: string;
-  current?: 'home' | 'blog' | 'about';
+  current?: 'home' | 'blog' | 'about' | '';
+  /** Alternateが渡されたら、その言語だけdropdownに出す（記事ページ用） */
+  alternates?: Alternate[];
 }
 
-const { lang, current = 'home' } = Astro.props;
+const { lang, current = 'home', alternates } = Astro.props;
 
-const langConfig: Record<string, { home: string; blog: string; about: string; label: string }> = {
-  en: { home: '/', blog: '/blog/', about: '/about/', label: 'EN' },
-  ja: { home: '/ja/', blog: '/ja/blog/', about: '/ja/about/', label: 'JP' },
-  ko: { home: '/ko/blog/', blog: '/ko/blog/', about: '/about/', label: 'KO' },
-  fr: { home: '/fr/blog/', blog: '/fr/blog/', about: '/about/', label: 'FR' },
-  pt: { home: '/pt/blog/', blog: '/pt/blog/', about: '/about/', label: 'PT' },
-  es: { home: '/es/blog/', blog: '/es/blog/', about: '/about/', label: 'ES' },
+interface LangEntry {
+  home: string;
+  blog: string;
+  about: string | null;
+  label: string;
+  /** dropdownの選択肢として広告するか。falseならNav経由で誘導しない（事業停止中の言語など） */
+  promoted: boolean;
+}
+
+const langConfig: Record<string, LangEntry> = {
+  en: { home: '/', blog: '/blog/', about: '/about/', label: 'EN', promoted: true },
+  ja: { home: '/ja/', blog: '/ja/blog/', about: '/ja/about/', label: 'JP', promoted: true },
+  fr: { home: '/fr/blog/', blog: '/fr/blog/', about: null, label: 'FR', promoted: true },
+  pt: { home: '/pt/blog/', blog: '/pt/blog/', about: null, label: 'PT', promoted: true },
+  es: { home: '/es/blog/', blog: '/es/blog/', about: null, label: 'ES', promoted: true },
+  ko: { home: '/ko/blog/', blog: '/ko/blog/', about: null, label: 'KO', promoted: false },
 };
 
 const currentLang = langConfig[lang] || langConfig.en;
@@ -23,29 +36,46 @@ const aboutUrl = currentLang.about;
 const pathname = Astro.url.pathname;
 const isBlogPost = /^(\/[a-z]{2})?\/blog\/.+/.test(pathname);
 
-const languages = Object.entries(langConfig)
-  .filter(([code]) => code !== lang)
-  .map(([code, config]) => ({
-    code,
-    label: config.label,
-    url: isBlogPost ? config.blog : (current === 'about' ? config.about : config.home),
-  }));
+type SwitcherItem = { code: string; label: string; url: string };
+
+let switcherItems: SwitcherItem[];
+if (alternates && alternates.length > 0) {
+  switcherItems = alternates
+    .filter(a => a.hreflang !== 'x-default' && a.hreflang !== lang && langConfig[a.hreflang])
+    .map(a => ({
+      code: a.hreflang,
+      label: langConfig[a.hreflang].label,
+      url: a.href.replace(/^https?:\/\/[^/]+/, ''),
+    }));
+} else {
+  switcherItems = Object.entries(langConfig)
+    .filter(([code, config]) => code !== lang && config.promoted)
+    .map(([code, config]) => ({
+      code,
+      label: config.label,
+      url: isBlogPost ? config.blog : (current === 'about' && config.about ? config.about : config.home),
+    }));
+}
 ---
 
 <nav class="site-nav">
   <a href={homeUrl} class="nav-logo">KaoriQ</a>
   <div class="nav-links">
     <a href={blogUrl} class:list={[{ active: current === 'blog' }]}>Blog</a>
-    <a href={aboutUrl} class:list={[{ active: current === 'about' }]}>About</a>
+    {aboutUrl && (
+      <a href={aboutUrl} class:list={[{ active: current === 'about' }]}>About</a>
+    )}
     <div class="lang-menu">
       <button class="nav-lang" aria-label="Language">
         {langConfig[lang]?.label || 'EN'} <span class="lang-arrow">&#9662;</span>
       </button>
-      <div class="lang-dropdown">
-        {languages.map(l => (
-          <a href={l.url} class="lang-option">{l.label}</a>
-        ))}
-      </div>
+      {switcherItems.length > 0 && (
+        <div class="lang-dropdown">
+          {switcherItems.map(l => (
+            <a href={l.url} class="lang-option">{l.label}</a>
+          ))}
+        </div>
+      )}
     </div>
     <button id="theme-toggle" class="theme-toggle" aria-label={lang === 'ja' ? 'テーマ切替' : 'Toggle theme'}>
       <span class="icon-sun">&#9788;</span>

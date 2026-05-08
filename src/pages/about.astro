@@ -1,6 +1,9 @@
 ---
 import BaseLayout from '../layouts/BaseLayout.astro';
 import Nav from '../components/Nav.astro';
+import { staticAlternates } from '../lib/alternates';
+
+const alternates = staticAlternates({ en: '/about/', ja: '/ja/about/' });
 ---
 
 <BaseLayout
@@ -9,6 +12,7 @@ import Nav from '../components/Nav.astro';
   lang="en"
   ogUrl="https://kaoriq.com/about/"
   ogDescription="About KaoriQ: data-driven fragrance recommendations powered by personality science."
+  alternates={alternates}
 >
   <Nav lang="en" current="about" />
 
@@ -50,9 +54,13 @@ import Nav from '../components/Nav.astro';
         </tr>
         <tr>
           <td style="padding: 0.6rem 0; color: var(--text-muted);">Contact</td>
-          <td style="padding: 0.6rem 0;"><a href="mailto:info@propel-lab.co.jp" style="color: var(--link-color);">info@propel-lab.co.jp</a></td>
+          <td style="padding: 0.6rem 0;"><a href="/contact/" style="color: var(--link-color);">contact form</a></td>
         </tr>
       </table>
+
+      <p style="margin-top: 1.5rem; font-size: 0.9rem; color: var(--text-muted);">
+        See also: <a href="/privacy/" style="color: var(--link-color);">Privacy Policy</a>.
+      </p>
     </div>
   </main>
 </BaseLayout>

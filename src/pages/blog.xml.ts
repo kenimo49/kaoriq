@@ -14,7 +14,7 @@ export async function GET(context: { site: URL }) {
       title: post.data.title,
       pubDate: post.data.date,
       description: post.data.description,
-      link: `/blog/${post.id.replace('en/', '')}`,
+      link: `/blog/${post.id.replace('en/', '')}/`,
     })),
   });
 }

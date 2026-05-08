@@ -1,0 +1,78 @@
+---
+import BaseLayout from '../layouts/BaseLayout.astro';
+import Nav from '../components/Nav.astro';
+import { staticAlternates } from '../lib/alternates';
+
+const alternates = staticAlternates({ en: '/privacy/', ja: '/ja/privacy/' });
+const updated = '2026-05-08';
+---
+
+<BaseLayout
+  title="Privacy Policy — KaoriQ"
+  description="Privacy policy for KaoriQ: what data we collect, why, and how to opt out."
+  lang="en"
+  ogUrl="https://kaoriq.com/privacy/"
+  ogDescription="Privacy policy for KaoriQ."
+  alternates={alternates}
+>
+  <Nav lang="en" current="" />
+
+  <main style="max-width: 720px; margin: 0 auto; padding: 4rem 2rem;">
+    <h1 style="font-size: 1.75rem; font-weight: 700; margin-bottom: 0.5rem;">Privacy Policy</h1>
+    <p style="color: var(--text-muted); font-size: 0.85rem; margin-bottom: 2rem;">Last updated: {updated}</p>
+
+    <div style="line-height: 1.85; color: var(--text-secondary);">
+      <p style="margin-bottom: 1.25rem;">
+        KaoriQ ("we", "our") is operated by Propel-Lab LLC. This page explains what information we collect when you visit kaoriq.com, why we collect it, and the choices you have. We try to keep this short and concrete.
+      </p>
+
+      <h2 style="font-size: 1.25rem; font-weight: 600; color: var(--text-primary); margin: 2rem 0 0.75rem;">1. What we collect</h2>
+      <p style="margin-bottom: 0.75rem;">We collect the following, and only the following:</p>
+      <ul style="padding-left: 1.5rem; margin: 0.75rem 0 1.25rem;">
+        <li><strong>Aggregated visit data via Google Analytics 4</strong> (page URL, referrer, country, device type, language, anonymized session info). GA4 sets cookies under <code>_ga</code> and <code>_ga_JQT8YQS2GL</code>.</li>
+        <li><strong>Article-feedback signals</strong> — when you press the helpful / not-helpful button at the bottom of an article, we record an event in GA4 (the article slug, category, and the button you pressed). No personal identifier is sent.</li>
+        <li><strong>Theme preference</strong> — the dark / light toggle stores a value in your browser's <code>localStorage</code>. It never leaves your device.</li>
+      </ul>
+      <p style="margin-bottom: 1.25rem;">
+        We do not run our own newsletter, account system, or order flow at this stage. We do not collect names, email addresses, or payment information from this site.
+      </p>
+
+      <h2 style="font-size: 1.25rem; font-weight: 600; color: var(--text-primary); margin: 2rem 0 0.75rem;">2. Why we collect it</h2>
+      <ul style="padding-left: 1.5rem; margin: 0.75rem 0 1.25rem;">
+        <li>To understand which articles are useful and which aren't, so we can spend our time on the right topics.</li>
+        <li>To measure how people arrive at the site (search, referrers, language).</li>
+        <li>To debug issues such as broken pages or missing translations.</li>
+      </ul>
+
+      <h2 style="font-size: 1.25rem; font-weight: 600; color: var(--text-primary); margin: 2rem 0 0.75rem;">3. Third parties</h2>
+      <p style="margin-bottom: 1.25rem;">
+        We use:
+      </p>
+      <ul style="padding-left: 1.5rem; margin: 0.75rem 0 1.25rem;">
+        <li><strong>Google Analytics 4</strong> — see <a href="https://policies.google.com/privacy" rel="noopener" target="_blank">Google's privacy policy</a>.</li>
+        <li><strong>Google Fonts</strong> — fonts are loaded from <code>fonts.googleapis.com</code>.</li>
+        <li><strong>GitHub Pages</strong> — the site itself is hosted on GitHub Pages. Standard server logs apply.</li>
+      </ul>
+
+      <h2 style="font-size: 1.25rem; font-weight: 600; color: var(--text-primary); margin: 2rem 0 0.75rem;">4. Cookies and how to opt out</h2>
+      <p style="margin-bottom: 1.25rem;">
+        You can disable Google Analytics in your browser using the official <a href="https://tools.google.com/dlpage/gaoptout" rel="noopener" target="_blank">GA opt-out add-on</a>, or by blocking cookies from <code>googletagmanager.com</code>. Doing so will not break anything on the site.
+      </p>
+
+      <h2 style="font-size: 1.25rem; font-weight: 600; color: var(--text-primary); margin: 2rem 0 0.75rem;">5. Data retention and your rights</h2>
+      <p style="margin-bottom: 1.25rem;">
+        GA4 data is retained for the default Google retention window. Because we do not collect personally identifiable information, we cannot identify a specific user's visit data. If you have a concern that involves data you believe relates to you, please contact us at the address below.
+      </p>
+
+      <h2 style="font-size: 1.25rem; font-weight: 600; color: var(--text-primary); margin: 2rem 0 0.75rem;">6. Updates to this policy</h2>
+      <p style="margin-bottom: 1.25rem;">
+        We update this page when we add or remove data flows. The "Last updated" date at the top reflects the latest revision.
+      </p>
+
+      <h2 style="font-size: 1.25rem; font-weight: 600; color: var(--text-primary); margin: 2rem 0 0.75rem;">7. Contact</h2>
+      <p style="margin-bottom: 1.25rem;">
+        Questions about this policy: see our <a href="/contact/">contact page</a>.
+      </p>
+    </div>
+  </main>
+</BaseLayout>

@@ -2,11 +2,14 @@
 import BaseLayout from '../layouts/BaseLayout.astro';
 import Nav from '../components/Nav.astro';
 import { getCollection } from 'astro:content';
+import { staticAlternates } from '../lib/alternates';
 
 const posts = (await getCollection('blog'))
   .filter(p => p.data.lang === 'en')
   .sort((a, b) => b.data.date.getTime() - a.data.date.getTime())
   .slice(0, 5);
+
+const alternates = staticAlternates({ en: '/', ja: '/ja/' });
 ---
 
 <BaseLayout
@@ -15,6 +18,8 @@ const posts = (await getCollection('blog'))
   lang="en"
   ogUrl="https://kaoriq.com/"
   ogDescription="Discover your perfect scent through personality-based AI recommendations."
+  alternates={alternates}
+  isHome
 >
   <Nav lang="en" current="home" />
 
@@ -31,24 +36,26 @@ const posts = (await getCollection('blog'))
     <section style="margin-bottom: 3rem;">
       <h2 style="font-size: 1.25rem; font-weight: 600; margin-bottom: 1.25rem; color: var(--text-label);">Coming Soon</h2>
       <div style="display: flex; flex-direction: column; gap: 1rem;">
-        <div style="padding: 1.25rem; border: 1px solid var(--text-separator); border-radius: 12px; background: var(--bg-card);">
-          <div style="display: flex; align-items: center; gap: 0.75rem; margin-bottom: 0.5rem;">
+        <a href="/blog/why-personality-matters-for-fragrance/" class="soon-card">
+          <div class="soon-card-head">
             <span style="font-size: 1.25rem;">🧠</span>
             <h3 style="font-size: 1rem; font-weight: 600; margin: 0;">AI Scent Matching</h3>
+            <span class="soon-cta">Read the thesis &rarr;</span>
           </div>
           <p style="font-size: 0.9rem; color: var(--text-muted); margin: 0; line-height: 1.6;">
-            A chat-based fragrance advisor that combines our 59,000+ fragrance database with Big Five personality diagnostics to find your perfect scent.
+            A chat-based fragrance advisor that combines our 59,000+ fragrance database with Big Five personality diagnostics to find your perfect scent. Until it ships, read why personality predicts fragrance preferences.
           </p>
-        </div>
-        <div style="padding: 1.25rem; border: 1px solid var(--text-separator); border-radius: 12px; background: var(--bg-card);">
-          <div style="display: flex; align-items: center; gap: 0.75rem; margin-bottom: 0.5rem;">
+        </a>
+        <a href="/blog/" class="soon-card">
+          <div class="soon-card-head">
             <span style="font-size: 1.25rem;">🛍️</span>
             <h3 style="font-size: 1rem; font-weight: 600; margin: 0;">Fragrance Shop</h3>
+            <span class="soon-cta">Browse the guides &rarr;</span>
           </div>
           <p style="font-size: 0.9rem; color: var(--text-muted); margin: 0; line-height: 1.6;">
-            Curated home fragrance collection -- candles, diffusers, and incense selected to match your personality type.
+            Curated home fragrance collection — candles, diffusers, and incense selected to match your personality type. While we build it, our guides walk you through what to buy and why.
           </p>
-        </div>
+        </a>
       </div>
     </section>
 
@@ -72,3 +79,34 @@ const posts = (await getCollection('blog'))
     )}
   </main>
 </BaseLayout>
+
+<style>
+  .soon-card {
+    padding: 1.25rem;
+    border: 1px solid var(--text-separator);
+    border-radius: 12px;
+    background: var(--bg-card);
+    display: block;
+    color: inherit !important;
+    text-decoration: none !important;
+    transition: border-color 0.15s, transform 0.15s;
+  }
+  .soon-card:hover {
+    border-color: var(--accent-primary);
+  }
+  .soon-card-head {
+    display: flex;
+    align-items: center;
+    gap: 0.75rem;
+    margin-bottom: 0.5rem;
+  }
+  .soon-cta {
+    margin-left: auto;
+    font-size: 0.78rem;
+    color: var(--accent-primary);
+    letter-spacing: 0.04em;
+  }
+  @media (max-width: 480px) {
+    .soon-cta { display: none; }
+  }
+</style>

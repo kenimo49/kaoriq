@@ -15,8 +15,17 @@ KaoriQ is a fragrance discovery platform that matches scents to individual perso
 
 - Blog (EN): https://kaoriq.com/blog/
 - Blog (JA): https://kaoriq.com/ja/blog/
+- Blog (FR): https://kaoriq.com/fr/blog/
+- Blog (PT-BR): https://kaoriq.com/pt/blog/
+- Blog (ES): https://kaoriq.com/es/blog/
 - RSS (EN): https://kaoriq.com/blog.xml
 - RSS (JA): https://kaoriq.com/ja/blog.xml
+
+## Categories
+
+- `guide` — Practical how-to-choose guides for home fragrance
+- `science` — Olfaction research, neuroscience of scent, ingredient chemistry
+- `story` — Cultural and historical narratives around fragrance materials
 
 ## Topics Covered
 
@@ -30,7 +39,16 @@ KaoriQ is a fragrance discovery platform that matches scents to individual perso
 
 - English (primary)
 - Japanese (日本語)
+- French (français)
+- Portuguese-Brazil (português-BR)
+- Spanish (español, LatAm-neutral)
+
+## Operator
+
+- Operator: Propel-Lab LLC (Fukuoka, Japan)
+- Parent site: https://www.propel-lab.co.jp/
 
 ## Contact
 
 - Website: https://kaoriq.com
+- Email: info@propel-lab.co.jp
