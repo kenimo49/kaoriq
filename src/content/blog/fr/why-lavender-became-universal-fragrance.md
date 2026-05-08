@@ -112,6 +112,4 @@ Universel n'est pas un terme condescendant. C'est 2000 ans de respect.
 
 Ce soir, si un diffuseur dans votre salon libere un parfum de lavande, pretez-y un instant d'attention. Les citoyens de la Rome antique, les voleurs du Moyen Age, les fermiers de Provence, Tadao Tomita a Hokkaido -- tous ont respire cette meme odeur.
 
-L'odeur du placard de grand-mere? C'est vrai aussi. Mais le gout de cette grand-mere est adosse a 2000 ans d'histoire.
-
-Pour en savoir plus sur la facon dont le rythme olfactif influence la perception des odeurs, consultez [cet article](/fr/blog/olfactory-circadian-rhythm-fragrance/).
+L'odeur du placard de grand-mère ? C'est vrai aussi. Mais le goût de cette grand-mère est adossé à 2000 ans d'histoire.

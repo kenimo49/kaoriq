@@ -9,6 +9,7 @@ interface Props {
   description: string;
   lang: string;
   date: Date;
+  updated?: Date;
   category?: 'science' | 'guide' | 'story';
   tags: string[];
   canonicalUrl: string;
@@ -17,7 +18,8 @@ interface Props {
   alternates?: Alternate[];
 }
 
-const { title, description, lang, date, category, tags, canonicalUrl, ogImage, crossPostedTo, alternates = [] } = Astro.props;
+const { title, description, lang, date, updated, category, tags, canonicalUrl, ogImage, crossPostedTo, alternates = [] } = Astro.props;
+const dateModified = updated ?? date;
 const formattedDate = date.toISOString().split('T')[0];
 const blogIndexUrl = lang === 'ja' ? '/ja/blog/' : '/blog/';
 ---
@@ -42,7 +44,7 @@ const blogIndexUrl = lang === 'ja' ? '/ja/blog/' : '/blog/';
       "description": description,
       "image": ogImage || "https://kaoriq.com/og-image.png",
       "datePublished": date.toISOString(),
-      "dateModified": date.toISOString(),
+      "dateModified": dateModified.toISOString(),
       "author": {
         "@type": "Organization",
         "name": "KaoriQ",

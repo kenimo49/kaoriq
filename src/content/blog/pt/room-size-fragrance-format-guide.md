@@ -102,7 +102,7 @@ Aqui vai a parte que você pode salvar e mandar pra alguém:
 
 ## Para onde isso leva
 
-A questão do formato é só o primeiro filtro. Uma vez que você combinou seu espaço com o mecanismo de dispersão certo, o aroma em si se torna a parte interessante — e é aí que a personalidade começa a importar. Se você perdeu nosso texto sobre [por que a personalidade prevê preferências de fragrância melhor que tendências](/pt/blog/why-personality-matters-for-fragrance/), é lá que aprofundamos.
+A questão do formato é só o primeiro filtro. Uma vez que você combinou seu espaço com o mecanismo de dispersão certo, o aroma em si se torna a parte interessante — e é aí que a personalidade começa a importar. Se você perdeu nosso texto sobre [por que a personalidade prevê preferências de fragrância melhor que tendências](/blog/why-personality-matters-for-fragrance/) (em inglês), é lá que aprofundamos.
 
 Por enquanto: meça seu cômodo. Escolha o formato certo. Depois se preocupe se você é uma pessoa de santal ou de bergamota.
 

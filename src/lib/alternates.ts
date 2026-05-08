@@ -1,6 +1,6 @@
 import type { CollectionEntry } from 'astro:content';
 
-export const SUPPORTED_LANGS = ['en', 'ja', 'ko', 'fr', 'pt', 'es'] as const;
+export const SUPPORTED_LANGS = ['en', 'ja', 'fr', 'pt', 'es'] as const;
 export type Lang = (typeof SUPPORTED_LANGS)[number];
 
 export interface Alternate {

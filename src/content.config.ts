@@ -7,6 +7,8 @@ const blog = defineCollection({
     title: z.string(),
     description: z.string(),
     date: z.date(),
+    /** 改稿が入った場合の最終更新日。未指定なら date と同値で扱う */
+    updated: z.date().optional(),
     lang: z.enum(['en', 'ja', 'ko', 'fr', 'pt', 'es']),
     category: z.enum(['science', 'guide', 'story']).default('guide'),
     tags: z.array(z.string()).default([]),

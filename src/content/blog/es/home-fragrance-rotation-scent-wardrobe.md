@@ -118,6 +118,6 @@ No necesitas cambiar toda la rotación cuatro veces al año. Solo ajústala un p
 
 Si ya tienes un producto de fragancia para el hogar — y la mayoría lo tiene — ya tienes un tercio de guardarropa olfativo. Decide si es tu aroma de mañana, noche o fin de semana. Luego agrega el que genere más contraste.
 
-Si tu producto actual es una vela amaderada, agrega un difusor de cítrico para las mañanas. Si es un difusor floral de varetas, agrega una vela cálida para las noches. ¿No sabes qué formato le va a tu espacio? Escribimos [una guía sobre cómo emparejar formatos de fragancia con tamaños de ambiente](/es/blog/room-size-fragrance-format-guide/) que cubre el lado práctico.
+Si tu producto actual es una vela amaderada, agrega un difusor de cítrico para las mañanas. Si es un difusor floral de varetas, agrega una vela cálida para las noches. ¿No sabes qué formato le va a tu espacio? Escribimos [una guía sobre cómo emparejar formatos de fragancia con tamaños de ambiente](/blog/room-size-fragrance-format-guide/) (en inglés) que cubre el lado práctico.
 
 Dos productos son suficientes para empezar a sentir la diferencia. El tercero es la excusa del mes que viene para volver a la tienda.

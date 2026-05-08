@@ -12,9 +12,11 @@ interface Props {
   alternates?: Alternate[];
   /** デフォルト false。トップページなど SiteEntity を埋め込みたい場合に true */
   isHome?: boolean;
+  /** 404 等で canonical を出力したくない場合に true */
+  noCanonical?: boolean;
 }
 
-const { title, description, lang, ogUrl, ogDescription, ogImage, ogType = 'website', alternates = [], isHome = false } = Astro.props;
+const { title, description, lang, ogUrl, ogDescription, ogImage, ogType = 'website', alternates = [], isHome = false, noCanonical = false } = Astro.props;
 const resolvedOgImage = ogImage || "https://kaoriq.com/og-image.png";
 
 const orgSchema = {
@@ -49,7 +51,7 @@ const websiteSchema = {
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <meta name="description" content={description} />
     <title>{title}</title>
-    <link rel="canonical" href={ogUrl} />
+    {!noCanonical && <link rel="canonical" href={ogUrl} />}
     <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
     <link rel="icon" type="image/png" href="/favicon.png" />
     <link rel="apple-touch-icon" href="/favicon.png" />
