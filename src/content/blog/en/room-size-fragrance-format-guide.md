@@ -7,6 +7,7 @@ category: guide
 tags: ["room-fragrance", "home-scenting", "practical-guide"]
 featured: false
 canonical_url: "https://kaoriq.com/blog/room-size-fragrance-format-guide/"
+og_image: "/images/blog/room-size-fragrance-format-guide/format-comparison.png"
 cross_posted_to: []
 ---
 

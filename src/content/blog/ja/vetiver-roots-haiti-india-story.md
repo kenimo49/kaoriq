@@ -7,6 +7,7 @@ category: story
 tags: ["ベチバー", "香りの歴史", "ハイチ", "インド", "ウッディ", "ルームフレグランス"]
 featured: false
 canonical_url: "https://kaoriq.com/ja/blog/vetiver-roots-haiti-india-story/"
+og_image: "/images/blog/vetiver-roots-haiti-india-story/vetiver-three-faces.png"
 cross_posted_to: []
 ---
 

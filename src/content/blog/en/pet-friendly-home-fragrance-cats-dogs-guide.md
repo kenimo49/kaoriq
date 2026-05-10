@@ -7,6 +7,7 @@ category: guide
 tags: ["pet-friendly-fragrance", "cat-safe-scent", "dog-safe-scent", "home-fragrance", "practical-guide"]
 featured: false
 canonical_url: "https://kaoriq.com/blog/pet-friendly-home-fragrance-cats-dogs-guide/"
+og_image: "/images/blog/pet-friendly-home-fragrance-cats-dogs-guide/pet-fragrance-format-comparison.png"
 cross_posted_to: []
 ---
 

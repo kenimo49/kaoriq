@@ -7,6 +7,7 @@ category: guide
 tags: ["fragancia-hogar", "guardarropa-olfativo", "rotación-aromas", "guía-práctica"]
 featured: false
 canonical_url: "https://kaoriq.com/es/blog/home-fragrance-rotation-scent-wardrobe/"
+og_image: "/images/blog/home-fragrance-rotation-scent-wardrobe/scent-wardrobe-rotation.png"
 cross_posted_to: []
 ---
 

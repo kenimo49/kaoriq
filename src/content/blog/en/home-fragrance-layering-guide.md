@@ -7,6 +7,7 @@ category: guide
 tags: ["fragrance-layering", "home-scenting", "practical-guide"]
 featured: false
 canonical_url: "https://kaoriq.com/blog/home-fragrance-layering-guide/"
+og_image: "/images/blog/home-fragrance-layering-guide/layering-rules.png"
 cross_posted_to: []
 ---
 

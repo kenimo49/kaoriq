@@ -7,6 +7,7 @@ category: guide
 tags: ["couples", "shared-space", "home-scenting", "practical-guide"]
 featured: false
 canonical_url: "https://kaoriq.com/blog/home-fragrance-couples-different-preferences-guide/"
+og_image: "/images/blog/home-fragrance-couples-different-preferences-guide/three-zones.png"
 cross_posted_to: []
 ---
 

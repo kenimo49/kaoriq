@@ -7,6 +7,7 @@ category: story
 tags: ["白檀", "サンダルウッド", "香りの歴史", "マイソール", "仏教", "ルームフレグランス"]
 featured: false
 canonical_url: "https://kaoriq.com/ja/blog/sandalwood-mysore-japan-story/"
+og_image: "/images/blog/sandalwood-mysore-japan-story/sandalwood-journey.png"
 cross_posted_to: []
 ---
 

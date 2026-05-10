@@ -6,6 +6,7 @@ lang: en
 category: science
 tags: ["scent-psychology", "big-five", "fragrance-science"]
 featured: true
+og_image: "/images/blog/why-personality-matters-for-fragrance/og.png"
 ---
 
 ## The Problem with How We Choose Fragrance

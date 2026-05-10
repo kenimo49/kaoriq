@@ -7,6 +7,7 @@ category: story
 tags: ["ラベンダー", "香りの歴史", "プロヴァンス", "ルームフレグランス"]
 featured: false
 canonical_url: "https://kaoriq.com/ja/blog/why-lavender-became-universal-fragrance/"
+og_image: "/images/blog/why-lavender-became-universal-fragrance/lavender-timeline.png"
 cross_posted_to: []
 ---
 

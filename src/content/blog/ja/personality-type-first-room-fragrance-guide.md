@@ -7,6 +7,7 @@ category: guide
 tags: ["空間フレグランス", "性格診断", "選び方ガイド", "初心者向け"]
 featured: false
 canonical_url: "https://kaoriq.com/ja/blog/personality-type-first-room-fragrance-guide/"
+og_image: "/images/blog/personality-type-first-room-fragrance-guide/personality-fragrance-map.png"
 cross_posted_to: []
 ---
 

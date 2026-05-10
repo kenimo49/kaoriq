@@ -7,6 +7,7 @@ category: guide
 tags: ["entryway-fragrance", "welcome-scent", "home-fragrance", "practical-guide"]
 featured: false
 canonical_url: "https://kaoriq.com/blog/entryway-fragrance-welcome-scent-guide/"
+og_image: "/images/blog/entryway-fragrance-welcome-scent-guide/entryway-personality-matchup.png"
 cross_posted_to: []
 ---
 

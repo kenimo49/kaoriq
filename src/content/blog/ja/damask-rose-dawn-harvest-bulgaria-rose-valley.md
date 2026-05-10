@@ -7,6 +7,7 @@ category: story
 tags: ["ローズ", "ダマスクローズ", "ブルガリア", "香水の素材", "蒸留"]
 featured: false
 canonical_url: "https://kaoriq.com/ja/blog/damask-rose-dawn-harvest-bulgaria-rose-valley/"
+og_image: "/images/blog/damask-rose-dawn-harvest-bulgaria-rose-valley/dawn-harvest.png"
 cross_posted_to: []
 ---
 

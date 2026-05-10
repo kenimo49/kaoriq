@@ -7,6 +7,7 @@ category: guide
 tags: ["空間フレグランス", "梅雨", "湿気対策", "選び方ガイド"]
 featured: false
 canonical_url: "https://kaoriq.com/ja/blog/rainy-season-humidity-home-fragrance-guide/"
+og_image: "/images/blog/rainy-season-humidity-home-fragrance-guide/rainy-season-three-directions.png"
 cross_posted_to: []
 ---
 

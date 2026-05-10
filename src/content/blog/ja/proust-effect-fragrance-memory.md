@@ -7,6 +7,7 @@ category: science
 tags: ["嗅覚の科学", "記憶と香り", "プルースト効果"]
 featured: false
 canonical_url: "https://kaoriq.com/ja/blog/proust-effect-fragrance-memory/"
+og_image: "/images/blog/proust-effect-fragrance-memory/olfactory-pathway-diagram.png"
 cross_posted_to: []
 ---
 

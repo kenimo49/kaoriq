@@ -17,7 +17,10 @@ interface Props {
 }
 
 const { title, description, lang, ogUrl, ogDescription, ogImage, ogType = 'website', alternates = [], isHome = false, noCanonical = false } = Astro.props;
-const resolvedOgImage = ogImage || "https://kaoriq.com/og-image.png";
+const SITE_ORIGIN = "https://kaoriq.com";
+const resolvedOgImage = ogImage
+  ? (ogImage.startsWith('http') ? ogImage : `${SITE_ORIGIN}${ogImage}`)
+  : `${SITE_ORIGIN}/og-image.png`;
 
 const orgSchema = {
   "@context": "https://schema.org",

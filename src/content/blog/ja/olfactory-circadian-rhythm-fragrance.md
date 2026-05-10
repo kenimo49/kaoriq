@@ -7,6 +7,7 @@ category: science
 tags: ["嗅覚の科学", "サーカディアンリズム", "空間フレグランス"]
 featured: false
 canonical_url: "https://kaoriq.com/ja/blog/olfactory-circadian-rhythm-fragrance/"
+og_image: "/images/blog/olfactory-circadian-rhythm-fragrance/circadian-sensitivity.png"
 cross_posted_to: []
 ---
 

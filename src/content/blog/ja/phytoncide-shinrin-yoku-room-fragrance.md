@@ -7,6 +7,7 @@ category: science
 tags: ["フィトンチッド", "森林浴", "和の香り", "空間フレグランス"]
 featured: false
 canonical_url: "https://kaoriq.com/ja/blog/phytoncide-shinrin-yoku-room-fragrance/"
+og_image: "/images/blog/phytoncide-shinrin-yoku-room-fragrance/phytoncide-molecule-map.png"
 cross_posted_to: []
 ---
 

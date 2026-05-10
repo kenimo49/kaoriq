@@ -7,6 +7,7 @@ category: guide
 tags: ["home-office", "focus-fragrance", "work-from-home", "practical-guide"]
 featured: false
 canonical_url: "https://kaoriq.com/blog/home-office-fragrance-focus-guide/"
+og_image: "/images/blog/home-office-fragrance-focus-guide/focus-families-comparison.png"
 cross_posted_to: []
 ---
 

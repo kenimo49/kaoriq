@@ -6,6 +6,7 @@ lang: ja
 category: science
 tags: ["香りの心理学", "Big Five", "フレグランスサイエンス"]
 featured: true
+og_image: "/images/blog/why-personality-matters-for-fragrance/og.png"
 ---
 
 ## 香水の選び方が間違っている

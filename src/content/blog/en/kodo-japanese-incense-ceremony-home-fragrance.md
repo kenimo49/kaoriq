@@ -7,6 +7,7 @@ category: story
 tags: ["kodo", "japanese-culture", "incense", "home-fragrance"]
 featured: false
 canonical_url: "https://kaoriq.com/blog/kodo-japanese-incense-ceremony-home-fragrance/"
+og_image: "/images/blog/kodo-japanese-incense-ceremony-home-fragrance/og.png"
 cross_posted_to: []
 ---
 

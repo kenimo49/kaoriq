@@ -7,6 +7,7 @@ category: science
 tags: ["嗅覚の科学", "嗅覚順応", "空間フレグランス"]
 featured: false
 canonical_url: "https://kaoriq.com/ja/blog/olfactory-adaptation-home-fragrance-3-methods/"
+og_image: "/images/blog/olfactory-adaptation-home-fragrance-3-methods/adaptation-mechanism.png"
 cross_posted_to: []
 ---
 

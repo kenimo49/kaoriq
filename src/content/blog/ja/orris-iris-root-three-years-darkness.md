@@ -7,6 +7,7 @@ category: story
 tags: ["オリス", "アイリス", "香水の素材", "フィレンツェ", "調香"]
 featured: false
 canonical_url: "https://kaoriq.com/ja/blog/orris-iris-root-three-years-darkness/"
+og_image: "/images/blog/orris-iris-root-three-years-darkness/orris-timeline.png"
 cross_posted_to: []
 ---
 

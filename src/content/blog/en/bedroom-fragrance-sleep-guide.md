@@ -7,6 +7,7 @@ category: guide
 tags: ["bedroom-fragrance", "sleep-friendly-scent", "pillow-mist", "practical-guide"]
 featured: false
 canonical_url: "https://kaoriq.com/blog/bedroom-fragrance-sleep-guide/"
+og_image: "/images/blog/bedroom-fragrance-sleep-guide/families-comparison.png"
 cross_posted_to: []
 ---
 

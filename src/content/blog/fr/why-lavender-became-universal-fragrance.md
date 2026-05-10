@@ -7,6 +7,7 @@ category: story
 tags: ["lavande", "histoire des parfums", "Provence", "parfum d'ambiance"]
 featured: false
 canonical_url: "https://kaoriq.com/fr/blog/why-lavender-became-universal-fragrance/"
+og_image: "/images/blog/why-lavender-became-universal-fragrance/lavender-timeline.png"
 cross_posted_to: []
 ---
 

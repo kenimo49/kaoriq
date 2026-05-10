@@ -7,6 +7,7 @@ category: guide
 tags: ["fragrância-de-ambiente", "aromatização", "guia-prático"]
 featured: false
 canonical_url: "https://kaoriq.com/pt/blog/room-size-fragrance-format-guide/"
+og_image: "/images/blog/room-size-fragrance-format-guide/format-comparison.png"
 cross_posted_to: []
 ---
 
